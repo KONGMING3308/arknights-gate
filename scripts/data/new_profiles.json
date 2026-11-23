@@ -1,0 +1,352 @@
+[
+  {
+    "cn": "斯卡蒂",
+    "id": "skadi",
+    "race": "未公开",
+    "origin": "阿戈尔",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "幽灵鲨",
+    "id": "specter",
+    "race": "未公开",
+    "origin": "阿戈尔",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "白金",
+    "id": "platinum",
+    "race": "库兰塔",
+    "origin": "卡西米尔",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "蓝毒",
+    "id": "bluepoison",
+    "race": "安努拉",
+    "origin": "未公开",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "白面鸮",
+    "id": "ptilopsis",
+    "race": "黎博利",
+    "origin": "哥伦比亚",
+    "career": "医疗干员"
+  },
+  {
+    "cn": "雷蛇",
+    "id": "liskarm",
+    "race": "瓦伊凡",
+    "origin": "瓦伊凡",
+    "career": "重装干员"
+  },
+  {
+    "cn": "初雪",
+    "id": "pramanix",
+    "race": "菲林",
+    "origin": "谢拉格",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "崖心",
+    "id": "cliffheart",
+    "race": "菲林",
+    "origin": "谢拉格",
+    "career": "特种干员"
+  },
+  {
+    "cn": "角峰",
+    "id": "matterhorn",
+    "race": "丰蹄",
+    "origin": "谢拉格",
+    "career": "重装干员"
+  },
+  {
+    "cn": "蛇屠箱",
+    "id": "cuora",
+    "race": "匹特拉姆",
+    "origin": "未公开",
+    "career": "重装干员"
+  },
+  {
+    "cn": "古米",
+    "id": "gummy",
+    "race": "乌萨斯",
+    "origin": "乌萨斯",
+    "career": "重装干员"
+  },
+  {
+    "cn": "空",
+    "id": "sora",
+    "race": "因经纪公司要求不公开",
+    "origin": "因经纪公司要求不公开",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "真理",
+    "id": "istina",
+    "race": "乌萨斯",
+    "origin": "乌萨斯",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "凛冬",
+    "id": "zima",
+    "race": "乌萨斯",
+    "origin": "乌萨斯",
+    "career": "先锋干员"
+  },
+  {
+    "cn": "因陀罗",
+    "id": "indra",
+    "race": "菲林",
+    "origin": "不明",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "慕斯",
+    "id": "mousse",
+    "race": "菲林",
+    "origin": "维多利亚",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "猎蜂",
+    "id": "beehunter",
+    "race": "乌萨斯",
+    "origin": "乌萨斯",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "送葬人",
+    "id": "executor",
+    "race": "萨科塔",
+    "origin": "拉特兰",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "红",
+    "id": "projektred",
+    "race": "鲁珀",
+    "origin": "未公开",
+    "career": "特种干员"
+  },
+  {
+    "cn": "砾",
+    "id": "gravel",
+    "race": "札拉克",
+    "origin": "卡西米尔",
+    "career": "特种干员"
+  },
+  {
+    "cn": "暗索",
+    "id": "rope",
+    "race": "卡特斯",
+    "origin": "雷姆必拓",
+    "career": "特种干员"
+  },
+  {
+    "cn": "深海色",
+    "id": "deepcolor",
+    "race": "未公开",
+    "origin": "未公开",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "梅尔",
+    "id": "mayer",
+    "race": "阿纳缇",
+    "origin": "哥伦比亚",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "麦哲伦",
+    "id": "magallan",
+    "race": "黎博利",
+    "origin": "哥伦比亚",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "伊芙利特",
+    "id": "ifrit",
+    "race": "萨卡兹",
+    "origin": "未公开",
+    "career": "术师干员"
+  },
+  {
+    "cn": "艾雅法拉",
+    "id": "eyjafjalla",
+    "race": "卡普里尼",
+    "origin": "莱塔尼亚",
+    "career": "术师干员"
+  },
+  {
+    "cn": "天火",
+    "id": "skyfire",
+    "race": "菲林",
+    "origin": "维多利亚",
+    "career": "术师干员"
+  },
+  {
+    "cn": "远山",
+    "id": "gitano",
+    "race": "埃拉菲亚",
+    "origin": "萨米",
+    "career": "术师干员"
+  },
+  {
+    "cn": "夜魔",
+    "id": "nightmare",
+    "race": "菲林",
+    "origin": "维多利亚",
+    "career": "术师干员"
+  },
+  {
+    "cn": "塞雷娅",
+    "id": "saria",
+    "race": "瓦伊凡",
+    "origin": "哥伦比亚",
+    "career": "重装干员"
+  },
+  {
+    "cn": "星极",
+    "id": "astesia",
+    "race": "黎博利",
+    "origin": "哥伦比亚",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "诗怀雅",
+    "id": "swire",
+    "race": "菲林",
+    "origin": "龙门",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "陨星",
+    "id": "meteorite",
+    "race": "萨卡兹",
+    "origin": "卡兹戴尔",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "白雪",
+    "id": "shirayuki",
+    "race": "阿纳缇",
+    "origin": "东国",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "安德切尔",
+    "id": "adnachiel",
+    "race": "萨科塔",
+    "origin": "拉特兰",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "史都华德",
+    "id": "steward",
+    "race": "沃尔珀",
+    "origin": "谢拉格",
+    "career": "术师干员"
+  },
+  {
+    "cn": "泡普卡",
+    "id": "popukar",
+    "race": "卡特斯",
+    "origin": "雷姆必拓",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "月见夜",
+    "id": "midnight",
+    "race": "萨卡兹",
+    "origin": "东国",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "普罗旺斯",
+    "id": "provence",
+    "race": "鲁珀",
+    "origin": "叙拉古",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "守林人",
+    "id": "firewatch",
+    "race": "埃拉菲亚",
+    "origin": "未公开",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "灰喉",
+    "id": "greyy",
+    "race": "黎博利",
+    "origin": "未公开",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "安比尔",
+    "id": "ambriel",
+    "race": "萨科塔",
+    "origin": "拉特兰",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "奥斯塔",
+    "id": "aosta",
+    "race": "鲁珀",
+    "origin": "叙拉古",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "鞭刃",
+    "id": "whislash",
+    "race": "库兰塔",
+    "origin": "卡西米尔",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "瑕光",
+    "id": "blemishine",
+    "race": "库兰塔",
+    "origin": "卡西米尔",
+    "career": "重装干员"
+  },
+  {
+    "cn": "石棉",
+    "id": "asbestos",
+    "race": "萨弗拉",
+    "origin": "雷姆必拓",
+    "career": "重装干员"
+  },
+  {
+    "cn": "极境",
+    "id": "elysium",
+    "race": "黎博利",
+    "origin": "伊比利亚",
+    "career": "先锋干员"
+  },
+  {
+    "cn": "早露",
+    "id": "rosa",
+    "race": "乌萨斯",
+    "origin": "乌萨斯",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "棘刺",
+    "id": "thorns",
+    "race": "阿戈尔",
+    "origin": "伊比利亚",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "格拉尼",
+    "id": "grani",
+    "race": "库兰塔",
+    "origin": "维多利亚",
+    "career": "先锋干员"
+  }
+]

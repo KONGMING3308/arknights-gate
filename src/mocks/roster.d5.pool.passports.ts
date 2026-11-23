@@ -1,0 +1,111 @@
+/**
+ * 用途：第 5 天候选池 —— 通行证。
+ *       破绽阶梯：多重破绽。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY5_POOL_PASSPORTS。
+ * 依赖：@/types
+ */
+import type { Passport } from '@/types'
+
+export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
+  'greyy-d5p': {
+    number: 'RI-5001-100',
+    holderName: '灰喉',
+    photo: 'greyy.png',
+    issueDate: '1096-05-10',
+    expiryDate: '1097-05-10',
+    route: '未知地区 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'ambriel-d5p': {
+    number: 'RI-5002-107',
+    holderName: '安比尔',
+    photo: 'ambriel.png',
+    issueDate: '1096-05-11',
+    expiryDate: '1097-05-11',
+    route: '拉特兰 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'aosta-d5p': {
+    number: 'RI-5003-114',
+    holderName: '奥斯塔',
+    photo: 'aosta.png',
+    issueDate: '1096-05-12',
+    expiryDate: '1097-05-12',
+    route: '叙拉古 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'whislash-d5p': {
+    number: 'RI-5004-121',
+    holderName: '鞭刃',
+    photo: 'whislash_glitch.png',
+    issueDate: '1096-05-13',
+    expiryDate: '1097-05-13',
+    route: '卡西米尔 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛后勤部',
+  },
+  'blemishine-d5p': {
+    number: 'RI-5005-128',
+    holderName: '瑕光',
+    photo: 'blemishine.png',
+    issueDate: '1096-05-14',
+    expiryDate: '1097-05-14',
+    route: '卡西米尔 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'asbestos-d5p': {
+    number: 'RI-5006-135',
+    holderName: '石棉',
+    photo: 'asbestos.png',
+    issueDate: '1096-05-15',
+    expiryDate: '1097-05-15',
+    route: '雷姆必拓 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'elysium-d5p': {
+    number: 'RI-5007-142',
+    holderName: '极境',
+    photo: 'elysium.png',
+    issueDate: '1096-05-16',
+    expiryDate: '1097-05-16',
+    route: '伊比利亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'rosa-d5p': {
+    number: 'RI-5008-149',
+    holderName: '早露',
+    photo: 'rosa.png',
+    issueDate: '1096-05-17',
+    expiryDate: '1097-05-17',
+    route: '乌萨斯 → 罗德岛本舰',
+    stampType: 'missing',
+    sealText: '罗德岛人事部',
+  },
+  'thorns-d5p': {
+    number: 'RI-5009-156',
+    holderName: '棘刺',
+    photo: 'thorns.png',
+    issueDate: '1096-05-18',
+    expiryDate: '1097-05-18',
+    route: '伊比利亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'grani-d5p': {
+    number: 'RI-5010-163',
+    holderName: '格拉尼',
+    photo: 'grani.png',
+    issueDate: '1096-05-10',
+    expiryDate: '1097-05-10',
+    route: '维多利亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+}

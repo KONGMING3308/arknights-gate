@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局底色与字体：深色审查桌氛围 */
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #0b0e13;
+  color: #e8e4d8;
+  font-family: 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 纸张质感：证件卡片使用 */
+.paper {
+  background-image: linear-gradient(160deg, #efe6cf 0%, #e3d7ba 55%, #d9caa6 100%);
+}
+
+.paper-dark {
+  background-image: linear-gradient(160deg, #1c2433 0%, #161d29 100%);
+}
+
+/* 细线分隔 */
+.hairline {
+  border: 1px solid rgba(200, 164, 92, 0.22);
+}
+
+::selection {
+  background: rgba(200, 164, 92, 0.35);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3243;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,113 @@
+/**
+ * 用途：第 4 天候选池 —— 档案。
+ *       破绽阶梯：档案状态（查无此人 / 已注销）。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY4_POOL_DOSSIERS。
+ * 依赖：@/types
+ */
+import type { Dossier } from '@/types'
+
+export const DAY4_POOL_DOSSIERS: Record<string, Dossier> = {
+  星极: {
+    codeName: '星极',
+    number: 'RI-4001-100',
+    occupation: '近卫干员',
+    origin: '哥伦比亚',
+    recommender: '闪灵',
+    photo: 'astesia.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+    note: '编号已换发：旧号 RI-4001-100 换发为 RI-4001-600，换发记录在本部备案。',
+  },
+  诗怀雅: {
+    codeName: '诗怀雅',
+    number: 'RI-4002-107',
+    occupation: '近卫干员',
+    origin: '龙门',
+    recommender: '银灰',
+    photo: 'swire.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+    note: '编号已换发：旧号 RI-4002-107 换发为 RI-4002-607，换发记录在本部备案。',
+  },
+  陨星: {
+    codeName: '陨星',
+    number: 'RI-4003-114',
+    occupation: '狙击干员',
+    origin: '卡兹戴尔',
+    recommender: '嘉维尔',
+    photo: 'meteorite.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  白雪: {
+    codeName: '白雪',
+    number: 'RI-4004-121',
+    occupation: '狙击干员',
+    origin: '东国',
+    recommender: '芙蓉',
+    photo: 'shirayuki.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  安德切尔: {
+    codeName: '安德切尔',
+    number: 'RI-4005-128',
+    occupation: '狙击干员',
+    origin: '拉特兰',
+    recommender: '临光',
+    photo: 'adnachiel.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  史都华德: {
+    codeName: '史都华德',
+    number: 'RI-4006-135',
+    occupation: '术师干员',
+    origin: '谢拉格',
+    recommender: '塞雷娅',
+    photo: 'steward.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  泡普卡: {
+    codeName: '泡普卡',
+    number: 'RI-4007-142',
+    occupation: '近卫干员',
+    origin: '雷姆必拓',
+    recommender: '凯尔希',
+    photo: 'popukar.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  月见夜: {
+    codeName: '月见夜',
+    number: 'RI-4008-149',
+    occupation: '近卫干员',
+    origin: '东国',
+    recommender: '阿米娅',
+    photo: 'midnight.png',
+    status: 'revoked',
+    requiredSeal: '罗德岛人事部',
+  },
+  普罗旺斯: {
+    codeName: '普罗旺斯',
+    number: 'RI-4009-156',
+    occupation: '狙击干员',
+    origin: '叙拉古',
+    recommender: '博士',
+    photo: 'provence.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  守林人: {
+    codeName: '守林人',
+    number: 'RI-4010-163',
+    occupation: '狙击干员',
+    origin: '未公开',
+    recommender: '杜宾',
+    photo: 'firewatch.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+}

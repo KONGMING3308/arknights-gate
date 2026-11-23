@@ -1,0 +1,113 @@
+/**
+ * 用途：第 1 天候选池 —— 档案。
+ *       破绽阶梯：印章（污损 / 机构不符）。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY1_POOL_DOSSIERS。
+ * 依赖：@/types
+ */
+import type { Dossier } from '@/types'
+
+export const DAY1_POOL_DOSSIERS: Record<string, Dossier> = {
+  斯卡蒂: {
+    codeName: '斯卡蒂',
+    number: 'RI-1001-100',
+    occupation: '近卫干员',
+    origin: '阿戈尔',
+    recommender: '阿米娅',
+    photo: 'skadi.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+    note: '编号已换发：旧号 RI-1001-100 换发为 RI-1001-600，换发记录在本部备案。',
+  },
+  幽灵鲨: {
+    codeName: '幽灵鲨',
+    number: 'RI-1002-107',
+    occupation: '近卫干员',
+    origin: '阿戈尔',
+    recommender: '博士',
+    photo: 'specter.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+    note: '编号已换发：旧号 RI-1002-107 换发为 RI-1002-607，换发记录在本部备案。',
+  },
+  白金: {
+    codeName: '白金',
+    number: 'RI-1003-114',
+    occupation: '狙击干员',
+    origin: '卡西米尔',
+    recommender: '杜宾',
+    photo: 'platinum.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  蓝毒: {
+    codeName: '蓝毒',
+    number: 'RI-1004-121',
+    occupation: '狙击干员',
+    origin: '未公开',
+    recommender: '闪灵',
+    photo: 'bluepoison.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  白面鸮: {
+    codeName: '白面鸮',
+    number: 'RI-1005-128',
+    occupation: '医疗干员',
+    origin: '哥伦比亚',
+    recommender: '银灰',
+    photo: 'ptilopsis.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  雷蛇: {
+    codeName: '雷蛇',
+    number: 'RI-1006-135',
+    occupation: '重装干员',
+    origin: '瓦伊凡',
+    recommender: '嘉维尔',
+    photo: 'liskarm.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  初雪: {
+    codeName: '初雪',
+    number: 'RI-1007-142',
+    occupation: '辅助干员',
+    origin: '谢拉格',
+    recommender: '芙蓉',
+    photo: 'pramanix.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  崖心: {
+    codeName: '崖心',
+    number: 'RI-1008-149',
+    occupation: '特种干员',
+    origin: '谢拉格',
+    recommender: '临光',
+    photo: 'cliffheart.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  角峰: {
+    codeName: '角峰',
+    number: 'RI-1009-156',
+    occupation: '重装干员',
+    origin: '谢拉格',
+    recommender: '塞雷娅',
+    photo: 'matterhorn.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  蛇屠箱: {
+    codeName: '蛇屠箱',
+    number: 'RI-1010-163',
+    occupation: '重装干员',
+    origin: '未公开',
+    recommender: '凯尔希',
+    photo: 'cuora.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+}

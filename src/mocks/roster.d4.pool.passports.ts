@@ -1,0 +1,111 @@
+/**
+ * 用途：第 4 天候选池 —— 通行证。
+ *       破绽阶梯：档案状态（查无此人 / 已注销）。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY4_POOL_PASSPORTS。
+ * 依赖：@/types
+ */
+import type { Passport } from '@/types'
+
+export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
+  'astesia-d4p': {
+    number: 'RI-4001-600',
+    holderName: '星极',
+    photo: 'astesia.png',
+    issueDate: '1096-04-10',
+    expiryDate: '1097-04-10',
+    route: '哥伦比亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'swire-d4p': {
+    number: 'RI-4002-607',
+    holderName: '诗怀雅',
+    photo: 'swire.png',
+    issueDate: '1096-04-11',
+    expiryDate: '1097-04-11',
+    route: '龙门 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'meteorite-d4p': {
+    number: 'RI-4003-114',
+    holderName: '陨星',
+    photo: 'meteorite.png',
+    issueDate: '1096-04-12',
+    expiryDate: '1097-04-12',
+    route: '卡兹戴尔 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'shirayuki-d4p': {
+    number: 'RI-4004-121',
+    holderName: '白雪',
+    photo: 'shirayuki.png',
+    issueDate: '1096-04-13',
+    expiryDate: '1097-04-13',
+    route: '东国 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'adnachiel-d4p': {
+    number: 'RI-4005-128',
+    holderName: '安德切尔',
+    photo: 'adnachiel.png',
+    issueDate: '1096-04-14',
+    expiryDate: '1097-04-14',
+    route: '拉特兰 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'steward-d4p': {
+    number: 'RI-4006-135',
+    holderName: '史都华德',
+    photo: 'steward.png',
+    issueDate: '1096-04-15',
+    expiryDate: '1097-04-15',
+    route: '谢拉格 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'popukar-d4p': {
+    number: 'RI-4007-142',
+    holderName: '泡普卡',
+    photo: 'popukar.png',
+    issueDate: '1096-04-16',
+    expiryDate: '1097-04-16',
+    route: '雷姆必拓 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'midnight-d4p': {
+    number: 'RI-4008-149',
+    holderName: '月见夜',
+    photo: 'midnight.png',
+    issueDate: '1096-04-17',
+    expiryDate: '1097-04-17',
+    route: '东国 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'provence-d4p': {
+    number: 'RI-4009-156',
+    holderName: '普罗旺斯',
+    photo: 'provence.png',
+    issueDate: '1096-04-18',
+    expiryDate: '1097-04-18',
+    route: '叙拉古 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'firewatch-d4p': {
+    number: 'RI-4010-163',
+    holderName: '守林人',
+    photo: 'firewatch.png',
+    issueDate: '1096-04-10',
+    expiryDate: '1097-04-10',
+    route: '未知地区 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+}

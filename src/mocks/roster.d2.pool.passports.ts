@@ -1,0 +1,111 @@
+/**
+ * 用途：第 2 天候选池 —— 通行证。
+ *       破绽阶梯：编号不符。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY2_POOL_PASSPORTS。
+ * 依赖：@/types
+ */
+import type { Passport } from '@/types'
+
+export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
+  'gummy-d2p': {
+    number: 'RI-2001-600',
+    holderName: '古米',
+    photo: 'gummy.png',
+    issueDate: '1096-02-10',
+    expiryDate: '1097-02-10',
+    route: '乌萨斯 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'sora-d2p': {
+    number: 'RI-2002-607',
+    holderName: '空',
+    photo: 'sora.png',
+    issueDate: '1096-02-11',
+    expiryDate: '1097-02-11',
+    route: '因经纪公司要求不公开 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'istina-d2p': {
+    number: 'RI-2003-114',
+    holderName: '真理',
+    photo: 'istina.png',
+    issueDate: '1096-02-12',
+    expiryDate: '1097-02-12',
+    route: '乌萨斯 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'zima-d2p': {
+    number: 'RI-2004-121',
+    holderName: '凛冬',
+    photo: 'zima.png',
+    issueDate: '1096-02-13',
+    expiryDate: '1097-02-13',
+    route: '乌萨斯 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'indra-d2p': {
+    number: 'RI-2005-128',
+    holderName: '因陀罗',
+    photo: 'indra.png',
+    issueDate: '1096-02-14',
+    expiryDate: '1097-02-14',
+    route: '未知地区 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'mousse-d2p': {
+    number: 'RI-2006-135',
+    holderName: '慕斯',
+    photo: 'mousse.png',
+    issueDate: '1096-02-15',
+    expiryDate: '1097-02-15',
+    route: '维多利亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'beehunter-d2p': {
+    number: 'RI-2007-142',
+    holderName: '猎蜂',
+    photo: 'beehunter.png',
+    issueDate: '1096-02-16',
+    expiryDate: '1097-02-16',
+    route: '乌萨斯 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'executor-d2p': {
+    number: 'RI-2008-907',
+    holderName: '送葬人',
+    photo: 'executor.png',
+    issueDate: '1096-02-17',
+    expiryDate: '1097-02-17',
+    route: '拉特兰 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'projektred-d2p': {
+    number: 'RI-2009-156',
+    holderName: '红',
+    photo: 'projektred.png',
+    issueDate: '1096-02-18',
+    expiryDate: '1097-02-18',
+    route: '未知地区 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'gravel-d2p': {
+    number: 'RI-2010-163',
+    holderName: '砾',
+    photo: 'gravel.png',
+    issueDate: '1096-02-10',
+    expiryDate: '1097-02-10',
+    route: '卡西米尔 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+}

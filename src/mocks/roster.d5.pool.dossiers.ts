@@ -1,0 +1,111 @@
+/**
+ * 用途：第 5 天候选池 —— 档案。
+ *       破绽阶梯：多重破绽。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY5_POOL_DOSSIERS。
+ * 依赖：@/types
+ */
+import type { Dossier } from '@/types'
+
+export const DAY5_POOL_DOSSIERS: Record<string, Dossier> = {
+  灰喉: {
+    codeName: '灰喉',
+    number: 'RI-5001-100',
+    occupation: '狙击干员',
+    origin: '未公开',
+    recommender: '银灰',
+    photo: 'greyy.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  安比尔: {
+    codeName: '安比尔',
+    number: 'RI-5002-107',
+    occupation: '狙击干员',
+    origin: '拉特兰',
+    recommender: '嘉维尔',
+    photo: 'ambriel.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  奥斯塔: {
+    codeName: '奥斯塔',
+    number: 'RI-5003-114',
+    occupation: '狙击干员',
+    origin: '叙拉古',
+    recommender: '芙蓉',
+    photo: 'aosta.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  鞭刃: {
+    codeName: '鞭刃',
+    number: 'RI-5004-903',
+    occupation: '近卫干员',
+    origin: '卡西米尔',
+    recommender: '临光',
+    photo: 'whislash.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  瑕光: {
+    codeName: '瑕光',
+    number: 'RI-5005-128',
+    occupation: '重装干员',
+    origin: '卡西米尔',
+    recommender: '塞雷娅',
+    photo: 'blemishine.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  石棉: {
+    codeName: '石棉',
+    number: 'RI-5006-135',
+    occupation: '重装干员',
+    origin: '雷姆必拓',
+    recommender: '凯尔希',
+    photo: 'asbestos.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  极境: {
+    codeName: '极境',
+    number: 'RI-5007-142',
+    occupation: '先锋干员',
+    origin: '伊比利亚',
+    recommender: '阿米娅',
+    photo: 'elysium.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  早露: {
+    codeName: '早露',
+    number: 'RI-5008-149',
+    occupation: '狙击干员',
+    origin: '乌萨斯',
+    recommender: '艾尔文',
+    photo: 'rosa.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  棘刺: {
+    codeName: '棘刺',
+    number: 'RI-5009-156',
+    occupation: '近卫干员',
+    origin: '伊比利亚',
+    recommender: '杜宾',
+    photo: 'thorns.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  格拉尼: {
+    codeName: '格拉尼',
+    number: 'RI-5010-163',
+    occupation: '先锋干员',
+    origin: '维多利亚',
+    recommender: '闪灵',
+    photo: 'grani.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+}

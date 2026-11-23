@@ -1,0 +1,113 @@
+/**
+ * 用途：第 3 天候选池 —— 档案。
+ *       破绽阶梯：职业不符。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY3_POOL_DOSSIERS。
+ * 依赖：@/types
+ */
+import type { Dossier } from '@/types'
+
+export const DAY3_POOL_DOSSIERS: Record<string, Dossier> = {
+  暗索: {
+    codeName: '暗索',
+    number: 'RI-3001-100',
+    occupation: '特种干员',
+    origin: '雷姆必拓',
+    recommender: '杜宾',
+    photo: 'rope.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+    note: '编号已换发：旧号 RI-3001-100 换发为 RI-3001-600，换发记录在本部备案。',
+  },
+  深海色: {
+    codeName: '深海色',
+    number: 'RI-3002-107',
+    occupation: '辅助干员',
+    origin: '未公开',
+    recommender: '闪灵',
+    photo: 'deepcolor.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+    note: '编号已换发：旧号 RI-3002-107 换发为 RI-3002-607，换发记录在本部备案。',
+  },
+  梅尔: {
+    codeName: '梅尔',
+    number: 'RI-3003-114',
+    occupation: '辅助干员',
+    origin: '哥伦比亚',
+    recommender: '银灰',
+    photo: 'mayer.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  麦哲伦: {
+    codeName: '麦哲伦',
+    number: 'RI-3004-121',
+    occupation: '辅助干员',
+    origin: '哥伦比亚',
+    recommender: '嘉维尔',
+    photo: 'magallan.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  伊芙利特: {
+    codeName: '伊芙利特',
+    number: 'RI-3005-128',
+    occupation: '术师干员',
+    origin: '未公开',
+    recommender: '芙蓉',
+    photo: 'ifrit.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  艾雅法拉: {
+    codeName: '艾雅法拉',
+    number: 'RI-3006-135',
+    occupation: '术师干员',
+    origin: '莱塔尼亚',
+    recommender: '临光',
+    photo: 'eyjafjalla.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  天火: {
+    codeName: '天火',
+    number: 'RI-3007-142',
+    occupation: '术师干员',
+    origin: '维多利亚',
+    recommender: '塞雷娅',
+    photo: 'skyfire.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  远山: {
+    codeName: '远山',
+    number: 'RI-3008-149',
+    occupation: '术师干员',
+    origin: '萨米',
+    recommender: '凯尔希',
+    photo: 'gitano.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  夜魔: {
+    codeName: '夜魔',
+    number: 'RI-3009-156',
+    occupation: '术师干员',
+    origin: '维多利亚',
+    recommender: '阿米娅',
+    photo: 'nightmare.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  塞雷娅: {
+    codeName: '塞雷娅',
+    number: 'RI-3010-163',
+    occupation: '重装干员',
+    origin: '哥伦比亚',
+    recommender: '博士',
+    photo: 'saria.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+}

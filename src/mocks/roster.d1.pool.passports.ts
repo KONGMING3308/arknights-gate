@@ -1,0 +1,111 @@
+/**
+ * 用途：第 1 天候选池 —— 通行证。
+ *       破绽阶梯：印章（污损 / 机构不符）。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY1_POOL_PASSPORTS。
+ * 依赖：@/types
+ */
+import type { Passport } from '@/types'
+
+export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
+  'skadi-d1p': {
+    number: 'RI-1001-600',
+    holderName: '斯卡蒂',
+    photo: 'skadi.png',
+    issueDate: '1096-01-10',
+    expiryDate: '1097-01-10',
+    route: '阿戈尔 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'specter-d1p': {
+    number: 'RI-1002-607',
+    holderName: '幽灵鲨',
+    photo: 'specter.png',
+    issueDate: '1096-01-11',
+    expiryDate: '1097-01-11',
+    route: '阿戈尔 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'platinum-d1p': {
+    number: 'RI-1003-114',
+    holderName: '白金',
+    photo: 'platinum.png',
+    issueDate: '1096-01-12',
+    expiryDate: '1097-01-12',
+    route: '卡西米尔 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'bluepoison-d1p': {
+    number: 'RI-1004-121',
+    holderName: '蓝毒',
+    photo: 'bluepoison.png',
+    issueDate: '1096-01-13',
+    expiryDate: '1097-01-13',
+    route: '未知地区 → 罗德岛本舰',
+    stampType: 'smudged',
+    sealText: '罗德岛人事部',
+  },
+  'ptilopsis-d1p': {
+    number: 'RI-1005-128',
+    holderName: '白面鸮',
+    photo: 'ptilopsis.png',
+    issueDate: '1096-01-14',
+    expiryDate: '1097-01-14',
+    route: '哥伦比亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'liskarm-d1p': {
+    number: 'RI-1006-135',
+    holderName: '雷蛇',
+    photo: 'liskarm.png',
+    issueDate: '1096-01-15',
+    expiryDate: '1097-01-15',
+    route: '瓦伊凡 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'pramanix-d1p': {
+    number: 'RI-1007-142',
+    holderName: '初雪',
+    photo: 'pramanix.png',
+    issueDate: '1096-01-16',
+    expiryDate: '1097-01-16',
+    route: '谢拉格 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'cliffheart-d1p': {
+    number: 'RI-1008-149',
+    holderName: '崖心',
+    photo: 'cliffheart.png',
+    issueDate: '1096-01-17',
+    expiryDate: '1097-01-17',
+    route: '谢拉格 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'matterhorn-d1p': {
+    number: 'RI-1009-156',
+    holderName: '角峰',
+    photo: 'matterhorn.png',
+    issueDate: '1096-01-18',
+    expiryDate: '1097-01-18',
+    route: '谢拉格 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'cuora-d1p': {
+    number: 'RI-1010-163',
+    holderName: '蛇屠箱',
+    photo: 'cuora.png',
+    issueDate: '1096-01-10',
+    expiryDate: '1097-01-10',
+    route: '未知地区 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+}

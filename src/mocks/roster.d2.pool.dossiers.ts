@@ -1,0 +1,113 @@
+/**
+ * 用途：第 2 天候选池 —— 档案。
+ *       破绽阶梯：编号不符。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY2_POOL_DOSSIERS。
+ * 依赖：@/types
+ */
+import type { Dossier } from '@/types'
+
+export const DAY2_POOL_DOSSIERS: Record<string, Dossier> = {
+  古米: {
+    codeName: '古米',
+    number: 'RI-2001-100',
+    occupation: '重装干员',
+    origin: '乌萨斯',
+    recommender: '博士',
+    photo: 'gummy.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+    note: '编号已换发：旧号 RI-2001-100 换发为 RI-2001-600，换发记录在本部备案。',
+  },
+  空: {
+    codeName: '空',
+    number: 'RI-2002-107',
+    occupation: '辅助干员',
+    origin: '因经纪公司要求不公开',
+    recommender: '杜宾',
+    photo: 'sora.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+    note: '编号已换发：旧号 RI-2002-107 换发为 RI-2002-607，换发记录在本部备案。',
+  },
+  真理: {
+    codeName: '真理',
+    number: 'RI-2003-114',
+    occupation: '辅助干员',
+    origin: '乌萨斯',
+    recommender: '闪灵',
+    photo: 'istina.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  凛冬: {
+    codeName: '凛冬',
+    number: 'RI-2004-903',
+    occupation: '先锋干员',
+    origin: '乌萨斯',
+    recommender: '银灰',
+    photo: 'zima.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  因陀罗: {
+    codeName: '因陀罗',
+    number: 'RI-2005-128',
+    occupation: '近卫干员',
+    origin: '不明',
+    recommender: '嘉维尔',
+    photo: 'indra.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  慕斯: {
+    codeName: '慕斯',
+    number: 'RI-2006-135',
+    occupation: '近卫干员',
+    origin: '维多利亚',
+    recommender: '芙蓉',
+    photo: 'mousse.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  猎蜂: {
+    codeName: '猎蜂',
+    number: 'RI-2007-142',
+    occupation: '近卫干员',
+    origin: '乌萨斯',
+    recommender: '临光',
+    photo: 'beehunter.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  送葬人: {
+    codeName: '送葬人',
+    number: 'RI-2008-907',
+    occupation: '狙击干员',
+    origin: '拉特兰',
+    recommender: '塞雷娅',
+    photo: 'executor.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  红: {
+    codeName: '红',
+    number: 'RI-2009-156',
+    occupation: '特种干员',
+    origin: '未公开',
+    recommender: '凯尔希',
+    photo: 'projektred.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+  砾: {
+    codeName: '砾',
+    number: 'RI-2010-163',
+    occupation: '特种干员',
+    origin: '卡西米尔',
+    recommender: '阿米娅',
+    photo: 'gravel.png',
+    status: 'active',
+    requiredSeal: '罗德岛人事部',
+  },
+}

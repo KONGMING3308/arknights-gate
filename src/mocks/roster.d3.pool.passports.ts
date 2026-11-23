@@ -1,0 +1,111 @@
+/**
+ * 用途：第 3 天候选池 —— 通行证。
+ *       破绽阶梯：职业不符。
+ *       种族 / 出身 / 职业均来自 prts.wiki 官方数据。
+ * 输入：无。输出：DAY3_POOL_PASSPORTS。
+ * 依赖：@/types
+ */
+import type { Passport } from '@/types'
+
+export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
+  'rope-d3p': {
+    number: 'RI-3001-600',
+    holderName: '暗索',
+    photo: 'rope.png',
+    issueDate: '1096-03-10',
+    expiryDate: '1097-03-10',
+    route: '雷姆必拓 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'deepcolor-d3p': {
+    number: 'RI-3002-607',
+    holderName: '深海色',
+    photo: 'deepcolor.png',
+    issueDate: '1096-03-11',
+    expiryDate: '1097-03-11',
+    route: '未知地区 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'mayer-d3p': {
+    number: 'RI-3003-114',
+    holderName: '梅尔',
+    photo: 'mayer.png',
+    issueDate: '1096-03-12',
+    expiryDate: '1097-03-12',
+    route: '哥伦比亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'magallan-d3p': {
+    number: 'RI-3004-121',
+    holderName: '麦哲伦',
+    photo: 'magallan.png',
+    issueDate: '1096-03-13',
+    expiryDate: '1097-03-13',
+    route: '哥伦比亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'ifrit-d3p': {
+    number: 'RI-3005-128',
+    holderName: '伊芙利特',
+    photo: 'ifrit.png',
+    issueDate: '1096-03-14',
+    expiryDate: '1097-03-14',
+    route: '未知地区 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'eyjafjalla-d3p': {
+    number: 'RI-3006-135',
+    holderName: '艾雅法拉',
+    photo: 'eyjafjalla.png',
+    issueDate: '1096-03-15',
+    expiryDate: '1097-03-15',
+    route: '莱塔尼亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'skyfire-d3p': {
+    number: 'RI-3007-142',
+    holderName: '天火',
+    photo: 'skyfire.png',
+    issueDate: '1096-03-16',
+    expiryDate: '1097-03-16',
+    route: '维多利亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'gitano-d3p': {
+    number: 'RI-3008-149',
+    holderName: '远山',
+    photo: 'gitano.png',
+    issueDate: '1096-03-17',
+    expiryDate: '1097-03-17',
+    route: '萨米 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'nightmare-d3p': {
+    number: 'RI-3009-156',
+    holderName: '夜魔',
+    photo: 'nightmare.png',
+    issueDate: '1096-03-18',
+    expiryDate: '1097-03-18',
+    route: '维多利亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+  'saria-d3p': {
+    number: 'RI-3010-163',
+    holderName: '塞雷娅',
+    photo: 'saria.png',
+    issueDate: '1096-03-10',
+    expiryDate: '1097-03-10',
+    route: '哥伦比亚 → 罗德岛本舰',
+    stampType: 'clear',
+    sealText: '罗德岛人事部',
+  },
+}
