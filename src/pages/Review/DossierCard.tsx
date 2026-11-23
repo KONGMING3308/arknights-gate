@@ -5,6 +5,7 @@
  */
 import { DOSSIER_COPY, REVIEW_SCREEN } from '@/constants/copy'
 import type { Dossier } from '@/types'
+import { asset } from '@/utils/asset'
 
 interface DossierCardProps {
   dossier: Dossier
@@ -33,7 +34,7 @@ export default function DossierCard({ dossier }: DossierCardProps) {
       <div className="flex gap-3">
         <div className="h-24 w-20 shrink-0 overflow-hidden rounded-sm border border-gold-500/20 bg-ink-800">
           <img
-            src={`/assets/portraits/${dossier.photo}`}
+            src={asset(`assets/portraits/${dossier.photo}`)}
             alt={dossier.codeName}
             className="h-full w-full object-cover"
           />

@@ -6,6 +6,7 @@
 import Panel from '@/components/Panel'
 import { APPLICANT_COPY, QUESTION_LABEL, REVIEW_SCREEN } from '@/constants/copy'
 import type { Applicant, DialogueLine } from '@/types'
+import { asset } from '@/utils/asset'
 
 interface ApplicantWindowProps {
   applicant: Applicant
@@ -45,7 +46,7 @@ export default function ApplicantWindow({ applicant, asked, onAsk }: ApplicantWi
           ].join(' ')}
         >
           <img
-            src={`/assets/portraits/${applicant.portrait}`}
+            src={asset(`assets/portraits/${applicant.portrait}`)}
             alt={applicant.codeName}
             className="h-full w-full object-cover"
           />

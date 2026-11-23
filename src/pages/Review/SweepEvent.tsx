@@ -8,6 +8,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { SWEEP } from '@/constants/game'
 import { SWEEP_COPY } from '@/constants/copy'
 import type { Applicant } from '@/types'
+import { asset } from '@/utils/asset'
 
 interface SweepEventProps {
   attacker: Applicant
@@ -68,7 +69,7 @@ export default function SweepEvent({ attacker, onResolved }: SweepEventProps) {
       {HANDS.map((hand) => (
         <img
           key={hand.cls}
-          src="/assets/events/reaching_hand.png"
+          src={asset('assets/events/reaching_hand.png')}
           alt=""
           className={`pointer-events-none absolute h-[70vh] w-auto animate-reach opacity-80 ${hand.cls}`}
           style={{ animationDelay: hand.delay }}
@@ -81,7 +82,7 @@ export default function SweepEvent({ attacker, onResolved }: SweepEventProps) {
       {result === 'success' && (
         <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#05070a]/92">
           <img
-            src="/assets/events/ascalon.png"
+            src={asset('assets/events/ascalon.png')}
             alt="阿斯卡纶"
             className="absolute bottom-0 left-1/2 h-[92vh] w-auto -translate-x-1/2 object-contain opacity-95 mix-blend-screen"
           />

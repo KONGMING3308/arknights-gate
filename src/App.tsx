@@ -9,8 +9,10 @@ import DayEndScreen from '@/pages/DayEnd/DayEndScreen'
 import EndingScreen from '@/pages/Ending/EndingScreen'
 
 export default function App() {
+  // basename 跟随 Vite 的 base：GitHub Pages 部署在 /arknights-gate/ 子路径下
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<TitleScreen />} />
         <Route path="/review" element={<ReviewScreen />} />

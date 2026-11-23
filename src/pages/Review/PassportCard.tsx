@@ -7,6 +7,7 @@
 import Stamp from '@/components/Stamp'
 import { ISSUER_LINE, PASSPORT_COPY, REVIEW_SCREEN } from '@/constants/copy'
 import type { Applicant, Passport, VerdictAction } from '@/types'
+import { asset } from '@/utils/asset'
 
 interface PassportCardProps {
   passport: Passport
@@ -49,7 +50,7 @@ export default function PassportCard({
           ].join(' ')}
         >
           <img
-            src={`/assets/portraits/${passport.photo}`}
+            src={asset(`assets/portraits/${passport.photo}`)}
             alt={passport.holderName}
             className="h-full w-full object-cover grayscale-[15%]"
           />
