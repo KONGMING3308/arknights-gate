@@ -1,9 +1,12 @@
 /**
  * 用途：数据访问层公共配置。所有请求必须经 src/api/ 且在这里切换 mock / 真实接口。
- * 输入：环境变量。输出：USE_MOCK、API_BASE。依赖：无。
+ * 输入：环境变量。输出：USE_MOCK、API_BASE。依赖：无
+ *
+ * 注意：只有显式写 VITE_USE_MOCK=false 时才走真实接口。
+ * 未设置该变量时默认使用 mock（原型阶段更安全，避免部署后误请求不存在的后端）。
  */
 
-export const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true'
+export const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'
 export const API_BASE = import.meta.env.VITE_API_BASE_URL ?? ''
 
 /** 模拟网络延迟 */

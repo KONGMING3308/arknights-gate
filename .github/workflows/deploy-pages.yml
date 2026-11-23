@@ -35,6 +35,9 @@ jobs:
 
       - name: 类型检查与构建
         run: npm run build
+        env:
+          # 原型阶段强制使用内置 mock 数据，避免部署后请求不存在的后端
+          VITE_USE_MOCK: 'true'
 
       - name: 配置 Pages
         uses: actions/configure-pages@v5
