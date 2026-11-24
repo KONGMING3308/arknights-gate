@@ -28,14 +28,14 @@ export const SWEEP = {
   chance: 0.35,
 } as const
 
-/** 关键处置（处决或放走入侵者）时屏幕震动强度 */
+/** 屏幕震动阈值（保留给未来的视觉反馈使用） */
 export const DANGER_THRESHOLD = 30
 
-/** 每天固定名单人数（普瑞塞斯会额外随机插入一位） */
+/**
+ * 每天抽取的人数（与 `mocks/index.ts` 的 DAILY_COUNT 保持一致）。
+ * 页面在名单尚未加载时用作进度条总数兜底。
+ */
 export const ROSTER_SIZE: Record<Day, number> = { 1: 3, 2: 6, 3: 7, 4: 8, 5: 8 }
-
-/** 每天入侵者人数 */
-export const IMPOSTOR_COUNT: Record<Day, number> = { 1: 1, 2: 1, 3: 2, 4: 2, 5: 3 }
 
 /** 通关评级阈值（安全度 + 信任度） */
 export const RATING_THRESHOLDS = [
