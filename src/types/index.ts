@@ -17,6 +17,12 @@ export type Phase = 'title' | 'review' | 'dayEnd' | 'ending'
 /** 通行证印章状态 */
 export type StampType = 'clear' | 'smudged' | 'missing'
 
+/**
+ * 印章图案 id，对应 public/assets/seals/ 下的图片。
+ * standard 是唯一合法的标准章，其余都是问题章，玩家需要看图辨认。
+ */
+export type SealId = 'standard' | 'wrong_dept' | 'foreign' | 'fake' | 'smudged' | 'none'
+
 /** 档案状态 */
 export type DossierStatus = 'active' | 'missing' | 'revoked'
 
@@ -74,6 +80,11 @@ export interface Passport {
   stampType: StampType
   /** 印章上刻的机构名，玩家要拿它比对档案要求 */
   sealText: string
+  /**
+   * 印章图案（指向 public/assets/seals/<id>.png）。
+   * 缺省时按 stampType / sealText 推断，保证老数据仍可用。
+   */
+  sealId?: SealId
 }
 
 export interface Dossier {

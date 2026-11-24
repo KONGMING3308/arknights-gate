@@ -83,6 +83,7 @@ export const DAY4_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '卡兹戴尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'scavenger-d4': {
     number: 'RI-3347-619',
@@ -93,6 +94,7 @@ export const DAY4_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'courier-d4': {
     number: 'RI-5563-281',
@@ -103,6 +105,7 @@ export const DAY4_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '谢拉格 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }
 

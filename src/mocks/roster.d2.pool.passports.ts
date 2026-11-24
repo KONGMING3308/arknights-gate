@@ -17,6 +17,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '乌萨斯 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'sora-d2p': {
     number: 'RI-2002-607',
@@ -27,6 +28,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '因经纪公司要求不公开 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'istina-d2p': {
     number: 'RI-2003-114',
@@ -37,6 +39,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '乌萨斯 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'zima-d2p': {
     number: 'RI-2004-121',
@@ -47,6 +50,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '乌萨斯 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'indra-d2p': {
     number: 'RI-2005-128',
@@ -57,6 +61,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '未知地区 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'mousse-d2p': {
     number: 'RI-2006-135',
@@ -67,6 +72,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'beehunter-d2p': {
     number: 'RI-2007-142',
@@ -77,6 +83,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '乌萨斯 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'executor-d2p': {
     number: 'RI-2008-907',
@@ -87,6 +94,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '拉特兰 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'projektred-d2p': {
     number: 'RI-2009-156',
@@ -97,6 +105,7 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '未知地区 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'gravel-d2p': {
     number: 'RI-2010-163',
@@ -107,5 +116,6 @@ export const DAY2_POOL_PASSPORTS: Record<string, Passport> = {
     route: '卡西米尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }

@@ -67,7 +67,7 @@ export const DAY3_POOL_APPLICANTS: Applicant[] = [
   {
     id: 'eyjafjalla-d3p', codeName: '艾雅法拉', portrait: 'eyjafjalla.png',
     race: '卡普里尼', origin: '莱塔尼亚', occupation: '术师干员',
-    kind: 'operator', day: 3, slot: 5,
+    kind: 'impostor', day: 3, slot: 5,
     intent: '返舰报到', recommender: '临光',
     dialogue: [
       { question: '代号', answer: '我是艾雅法拉，别耽误时间。' }, { question: '来意', answer: '换防归舰，补个入境登记。' },

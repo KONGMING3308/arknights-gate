@@ -17,6 +17,7 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     route: '未知地区 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'ambriel-d5p': {
     number: 'RI-5002-107',
@@ -27,6 +28,7 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     route: '拉特兰 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'aosta-d5p': {
     number: 'RI-5003-114',
@@ -37,6 +39,7 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     route: '叙拉古 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'whislash-d5p': {
     number: 'RI-5004-121',
@@ -46,7 +49,8 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     expiryDate: '1097-05-13',
     route: '卡西米尔 → 罗德岛本舰',
     stampType: 'clear',
-    sealText: '罗德岛后勤部',
+    sealText: '其他机构',
+    sealId: 'foreign',
   },
   'blemishine-d5p': {
     number: 'RI-5005-128',
@@ -57,6 +61,7 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     route: '卡西米尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'asbestos-d5p': {
     number: 'RI-5006-135',
@@ -67,6 +72,7 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     route: '雷姆必拓 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'elysium-d5p': {
     number: 'RI-5007-142',
@@ -77,6 +83,7 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     route: '伊比利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'rosa-d5p': {
     number: 'RI-5008-149',
@@ -86,7 +93,8 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     expiryDate: '1097-05-17',
     route: '乌萨斯 → 罗德岛本舰',
     stampType: 'missing',
-    sealText: '罗德岛人事部',
+    sealText: '无',
+    sealId: 'none',
   },
   'thorns-d5p': {
     number: 'RI-5009-156',
@@ -97,6 +105,7 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     route: '伊比利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'grani-d5p': {
     number: 'RI-5010-163',
@@ -107,5 +116,6 @@ export const DAY5_POOL_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }

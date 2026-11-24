@@ -88,6 +88,7 @@ export const DAY5_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '卡兹戴尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'franka-d5': {
     number: 'RI-7781-335',
@@ -98,6 +99,7 @@ export const DAY5_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '哥伦比亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'shapeshifter-d5': {
     number: 'RI-0000-000',
@@ -107,7 +109,8 @@ export const DAY5_EXTRA_PASSPORTS: Record<string, Passport> = {
     expiryDate: '1097-01-01',
     route: '未知 → 罗德岛本舰',
     stampType: 'missing',
-    sealText: '罗德岛人事部',
+    sealText: '无',
+    sealId: 'none',
   },
 }
 

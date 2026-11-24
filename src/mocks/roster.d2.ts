@@ -104,6 +104,7 @@ export const DAY2_PASSPORTS: Record<string, Passport> = {
     route: '雷姆必拓 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'catapult-d2': {
     number: 'RI-1102-002',
@@ -114,6 +115,7 @@ export const DAY2_PASSPORTS: Record<string, Passport> = {
     route: '莱塔尼亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'melantha-d2': {
     number: 'RI-1103-003',
@@ -124,6 +126,7 @@ export const DAY2_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'haze-d2': {
     number: 'RI-1104-004',
@@ -134,6 +137,7 @@ export const DAY2_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }
 

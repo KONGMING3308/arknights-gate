@@ -83,6 +83,7 @@ export const DAY3_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '哥伦比亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'nearl-d3': {
     number: 'RI-1302-008',
@@ -93,6 +94,7 @@ export const DAY3_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '卡西米尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'closure-d3': {
     number: 'RI-1303-009',
@@ -103,6 +105,7 @@ export const DAY3_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '卡兹戴尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }
 

@@ -83,6 +83,7 @@ export const DAY1_PASSPORTS: Record<string, Passport> = {
     route: '雷姆必拓 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'fang-d1': {
     number: 'RI-6612-118',
@@ -93,6 +94,7 @@ export const DAY1_PASSPORTS: Record<string, Passport> = {
     route: '卡西米尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'beagle-d1': {
     number: 'RI-3020-441',
@@ -102,7 +104,8 @@ export const DAY1_PASSPORTS: Record<string, Passport> = {
     expiryDate: '1097-01-19',
     route: '玻利瓦尔 → 罗德岛本舰',
     stampType: 'smudged',
-    sealText: '（污损）…人事部',
+    sealText: '污损，无法辨认',
+    sealId: 'smudged',
   },
 }
 

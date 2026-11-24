@@ -17,6 +17,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '哥伦比亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'swire-d4p': {
     number: 'RI-4002-607',
@@ -27,6 +28,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '龙门 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'meteorite-d4p': {
     number: 'RI-4003-114',
@@ -37,6 +39,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '卡兹戴尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'shirayuki-d4p': {
     number: 'RI-4004-121',
@@ -47,6 +50,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '东国 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'adnachiel-d4p': {
     number: 'RI-4005-128',
@@ -57,6 +61,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '拉特兰 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'steward-d4p': {
     number: 'RI-4006-135',
@@ -67,6 +72,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '谢拉格 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'popukar-d4p': {
     number: 'RI-4007-142',
@@ -77,6 +83,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '雷姆必拓 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'midnight-d4p': {
     number: 'RI-4008-149',
@@ -87,6 +94,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '东国 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'provence-d4p': {
     number: 'RI-4009-156',
@@ -97,6 +105,7 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '叙拉古 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'firewatch-d4p': {
     number: 'RI-4010-163',
@@ -107,5 +116,6 @@ export const DAY4_POOL_PASSPORTS: Record<string, Passport> = {
     route: '未知地区 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }

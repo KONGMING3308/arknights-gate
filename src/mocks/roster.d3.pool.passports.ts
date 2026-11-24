@@ -17,6 +17,7 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '雷姆必拓 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'deepcolor-d3p': {
     number: 'RI-3002-607',
@@ -27,6 +28,7 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '未知地区 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'mayer-d3p': {
     number: 'RI-3003-114',
@@ -37,6 +39,7 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '哥伦比亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'magallan-d3p': {
     number: 'RI-3004-121',
@@ -47,6 +50,7 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '哥伦比亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'ifrit-d3p': {
     number: 'RI-3005-128',
@@ -57,16 +61,18 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '未知地区 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'eyjafjalla-d3p': {
     number: 'RI-3006-135',
     holderName: '艾雅法拉',
     photo: 'eyjafjalla.png',
-    issueDate: '1096-03-15',
-    expiryDate: '1097-03-15',
+    issueDate: '1097-04-12',
+    expiryDate: '1096-04-11',
     route: '莱塔尼亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'skyfire-d3p': {
     number: 'RI-3007-142',
@@ -77,6 +83,7 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'gitano-d3p': {
     number: 'RI-3008-149',
@@ -87,6 +94,7 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '萨米 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'nightmare-d3p': {
     number: 'RI-3009-156',
@@ -97,6 +105,7 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'saria-d3p': {
     number: 'RI-3010-163',
@@ -107,5 +116,6 @@ export const DAY3_POOL_PASSPORTS: Record<string, Passport> = {
     route: '哥伦比亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }

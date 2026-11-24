@@ -5,7 +5,7 @@
 
 export const APP_TITLE = '这不是我的干员'
 export const APP_SUBTITLE = 'RHODES ISLAND · BORDER INSPECTION'
-export const APP_VERSION = 'v1.0'
+export const APP_VERSION = 'v1.1'
 export const ISSUER_LINE = 'RHODES ISLAND'
 
 export const ACTION_LABEL = {
@@ -147,6 +147,7 @@ export const PASSPORT_COPY = {
   photoMismatch: '与本人不符',
   photoPending: '待人工核验',
   noStamp: '无入境章',
+  sealHint: '对照标准章核对',
   smudged: '污损',
   entry: '入境',
   stampApprove: '已批准',

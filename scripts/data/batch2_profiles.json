@@ -1,0 +1,352 @@
+[
+  {
+    "cn": "W",
+    "id": "op_w",
+    "race": "萨卡兹",
+    "origin": "卡兹戴尔",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "泥岩",
+    "id": "niyan",
+    "race": "萨卡兹",
+    "origin": "卡兹戴尔",
+    "career": "重装干员"
+  },
+  {
+    "cn": "温蒂",
+    "id": "wendi",
+    "race": "阿戈尔",
+    "origin": "伊比利亚",
+    "career": "特种干员"
+  },
+  {
+    "cn": "赫拉格",
+    "id": "helage",
+    "race": "黎博利",
+    "origin": "乌萨斯",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "森蚺",
+    "id": "senran",
+    "race": "斐迪亚",
+    "origin": "萨尔贡",
+    "career": "重装干员"
+  },
+  {
+    "cn": "傀影",
+    "id": "kuiying",
+    "race": "菲林",
+    "origin": "维多利亚",
+    "career": "特种干员"
+  },
+  {
+    "cn": "白铁",
+    "id": "baitie",
+    "race": "菲林",
+    "origin": "维多利亚",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "水月",
+    "id": "shuiyue",
+    "race": "阿戈尔",
+    "origin": "东国",
+    "career": "特种干员"
+  },
+  {
+    "cn": "令",
+    "id": "ling",
+    "race": "未公开",
+    "origin": "炎",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "夕",
+    "id": "xi",
+    "race": "未公开",
+    "origin": "炎",
+    "career": "术师干员"
+  },
+  {
+    "cn": "重岳",
+    "id": "chongyue",
+    "race": "未公开",
+    "origin": "炎",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "年",
+    "id": "nian",
+    "race": "未公开",
+    "origin": "炎",
+    "career": "重装干员"
+  },
+  {
+    "cn": "炎客",
+    "id": "yanke",
+    "race": "萨卡兹",
+    "origin": "卡兹戴尔",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "阿",
+    "id": "a",
+    "race": "菲林",
+    "origin": "龙门",
+    "career": "特种干员"
+  },
+  {
+    "cn": "吽",
+    "id": "hou",
+    "race": "佩洛",
+    "origin": "龙门",
+    "career": "重装干员"
+  },
+  {
+    "cn": "刻俄柏",
+    "id": "keebo",
+    "race": "佩洛",
+    "origin": "玻利瓦尔",
+    "career": "术师干员"
+  },
+  {
+    "cn": "菲亚梅塔",
+    "id": "fiammetta",
+    "race": "黎博利",
+    "origin": "拉特兰",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "艾丽妮",
+    "id": "irene",
+    "race": "黎博利",
+    "origin": "伊比利亚",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "鸿雪",
+    "id": "hongxue",
+    "race": "鲁珀",
+    "origin": "乌萨斯",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "迷迭香",
+    "id": "midiexiang",
+    "race": "菲林",
+    "origin": "哥伦比亚",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "澄闪",
+    "id": "chengshan",
+    "race": "菲林",
+    "origin": "维多利亚",
+    "career": "术师干员"
+  },
+  {
+    "cn": "铃兰",
+    "id": "linglan",
+    "race": "沃尔珀",
+    "origin": "东国",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "桃金娘",
+    "id": "taojinniang",
+    "race": "杜林",
+    "origin": "未公开",
+    "career": "先锋干员"
+  },
+  {
+    "cn": "阿消",
+    "id": "axiao",
+    "race": "札拉克",
+    "origin": "龙门",
+    "career": "特种干员"
+  },
+  {
+    "cn": "卡达",
+    "id": "kada",
+    "race": "札拉克",
+    "origin": "未公开",
+    "career": "术师干员"
+  },
+  {
+    "cn": "松果",
+    "id": "songguo",
+    "race": "黎博利",
+    "origin": "哥伦比亚",
+    "career": "狙击干员"
+  },
+  {
+    "cn": "稀音",
+    "id": "xiyin",
+    "race": "皮洛萨",
+    "origin": "萨尔贡",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "苦艾",
+    "id": "kuai",
+    "race": "乌萨斯",
+    "origin": "乌萨斯",
+    "career": "术师干员"
+  },
+  {
+    "cn": "莱恩哈特",
+    "id": "lainhard",
+    "race": "卡特斯",
+    "origin": "雷姆必拓",
+    "career": "术师干员"
+  },
+  {
+    "cn": "断崖",
+    "id": "duanya",
+    "race": "卡特斯",
+    "origin": "雷姆必拓",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "露托",
+    "id": "luotuo",
+    "race": "札拉克",
+    "origin": "玻利瓦尔",
+    "career": "重装干员"
+  },
+  {
+    "cn": "达格达",
+    "id": "dageda",
+    "race": "菲林",
+    "origin": "维多利亚",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "格劳克斯",
+    "id": "glaucus",
+    "race": "未公开",
+    "origin": "阿戈尔地区",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "苇草",
+    "id": "weicao",
+    "race": "德拉克",
+    "origin": "维多利亚",
+    "career": "先锋干员"
+  },
+  {
+    "cn": "布洛卡",
+    "id": "broca",
+    "race": "菲林",
+    "origin": "叙拉古",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "惊蛰",
+    "id": "jingzhe",
+    "race": "麒麟",
+    "origin": "炎",
+    "career": "术师干员"
+  },
+  {
+    "cn": "折光",
+    "id": "zheguang",
+    "race": "卡普里尼",
+    "origin": "莱塔尼亚",
+    "career": "术师干员"
+  },
+  {
+    "cn": "电弧",
+    "id": "dianhu",
+    "race": "黎博利",
+    "origin": "乌萨斯",
+    "career": "辅助干员"
+  },
+  {
+    "cn": "夜刀",
+    "id": "yadao",
+    "race": "鬼",
+    "origin": "东国",
+    "career": "先锋干员"
+  },
+  {
+    "cn": "史尔特尔",
+    "id": "surtr",
+    "race": "萨卡兹",
+    "origin": "不明",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "嵯峨",
+    "id": "cuoe",
+    "race": "佩洛",
+    "origin": "东国",
+    "career": "先锋干员"
+  },
+  {
+    "cn": "红隼",
+    "id": "hongzhun",
+    "race": "黎博利",
+    "origin": "萨尔贡",
+    "career": "先锋干员"
+  },
+  {
+    "cn": "霜叶",
+    "id": "shuangye",
+    "race": "沃尔珀",
+    "origin": "哥伦比亚",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "艾丝黛尔",
+    "id": "estelle",
+    "race": "阿达克利斯",
+    "origin": "未公开",
+    "career": "近卫干员"
+  },
+  {
+    "cn": "卡夫卡",
+    "id": "kafka",
+    "race": "黎博利",
+    "origin": "哥伦比亚",
+    "career": "特种干员"
+  },
+  {
+    "cn": "泡泡",
+    "id": "paopao",
+    "race": "塞拉托",
+    "origin": "萨尔贡",
+    "career": "重装干员"
+  },
+  {
+    "cn": "褐果",
+    "id": "heguo",
+    "race": "杜林",
+    "origin": "未公开",
+    "career": "医疗干员"
+  },
+  {
+    "cn": "郁金香",
+    "id": "yujinxiang",
+    "race": "斐迪亚",
+    "origin": "伊比利亚",
+    "career": "先锋干员"
+  },
+  {
+    "cn": "蜜蜡",
+    "id": "mila",
+    "race": "卡普里尼",
+    "origin": "萨尔贡",
+    "career": "术师干员"
+  },
+  {
+    "cn": "微风",
+    "id": "weifeng",
+    "race": "沃尔珀",
+    "origin": "维多利亚",
+    "career": "医疗干员"
+  }
+]

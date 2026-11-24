@@ -16,6 +16,7 @@ export const DAY5_PASSPORTS: Record<string, Passport> = {
     route: '卡兹戴尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'shining-d5': {
     number: 'RI-7742-558',
@@ -26,6 +27,7 @@ export const DAY5_PASSPORTS: Record<string, Passport> = {
     route: '卡兹戴尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛后勤部',
+    sealId: 'wrong_dept',
   },
   'hoshiguma-d5': {
     number: 'RI-8856-301',
@@ -36,6 +38,7 @@ export const DAY5_PASSPORTS: Record<string, Passport> = {
     route: '东国 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'chen-d5': {
     number: 'RI-4471-889',
@@ -46,6 +49,7 @@ export const DAY5_PASSPORTS: Record<string, Passport> = {
     route: '龙门 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'siege-d5': {
     number: 'RI-6693-224',
@@ -56,6 +60,7 @@ export const DAY5_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }
 

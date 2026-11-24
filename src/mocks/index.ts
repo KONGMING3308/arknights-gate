@@ -30,6 +30,21 @@ import { DAY4_POOL_DOSSIERS } from './roster.d4.pool.dossiers'
 import { DAY5_POOL_APPLICANTS } from './roster.d5.pool'
 import { DAY5_POOL_PASSPORTS } from './roster.d5.pool.passports'
 import { DAY5_POOL_DOSSIERS } from './roster.d5.pool.dossiers'
+import { DAY1_POOL2_APPLICANTS } from './roster.d1.pool2'
+import { DAY1_POOL2_PASSPORTS } from './roster.d1.pool2.passports'
+import { DAY1_POOL2_DOSSIERS } from './roster.d1.pool2.dossiers'
+import { DAY2_POOL2_APPLICANTS } from './roster.d2.pool2'
+import { DAY2_POOL2_PASSPORTS } from './roster.d2.pool2.passports'
+import { DAY2_POOL2_DOSSIERS } from './roster.d2.pool2.dossiers'
+import { DAY3_POOL2_APPLICANTS } from './roster.d3.pool2'
+import { DAY3_POOL2_PASSPORTS } from './roster.d3.pool2.passports'
+import { DAY3_POOL2_DOSSIERS } from './roster.d3.pool2.dossiers'
+import { DAY4_POOL2_APPLICANTS } from './roster.d4.pool2'
+import { DAY4_POOL2_PASSPORTS } from './roster.d4.pool2.passports'
+import { DAY4_POOL2_DOSSIERS } from './roster.d4.pool2.dossiers'
+import { DAY5_POOL2_APPLICANTS } from './roster.d5.pool2'
+import { DAY5_POOL2_PASSPORTS } from './roster.d5.pool2.passports'
+import { DAY5_POOL2_DOSSIERS } from './roster.d5.pool2.dossiers'
 import {
   getAnomalyPlacement,
   PRESETH_APPLICANT,
@@ -45,11 +60,11 @@ export const DAILY_IMPOSTORS: Record<number, number> = { 1: 1, 2: 1, 3: 2, 4: 2,
 
 /** 按天合并的候选池 */
 const POOL_BY_DAY: Record<number, Applicant[]> = {
-  1: [...DAY1_APPLICANTS, ...DAY1_POOL_APPLICANTS],
-  2: [...DAY2_APPLICANTS, ...DAY2_EXTRA_APPLICANTS, ...DAY2_POOL_APPLICANTS],
-  3: [...DAY3_APPLICANTS, ...DAY3_EXTRA_APPLICANTS, ...DAY3_POOL_APPLICANTS],
-  4: [...DAY4_APPLICANTS, ...DAY4_EXTRA_APPLICANTS, ...DAY4_POOL_APPLICANTS],
-  5: [...DAY5_APPLICANTS, ...DAY5_EXTRA_APPLICANTS, ...DAY5_POOL_APPLICANTS],
+  1: [...DAY1_APPLICANTS, ...DAY1_POOL_APPLICANTS, ...DAY1_POOL2_APPLICANTS],
+  2: [...DAY2_APPLICANTS, ...DAY2_EXTRA_APPLICANTS, ...DAY2_POOL_APPLICANTS, ...DAY2_POOL2_APPLICANTS],
+  3: [...DAY3_APPLICANTS, ...DAY3_EXTRA_APPLICANTS, ...DAY3_POOL_APPLICANTS, ...DAY3_POOL2_APPLICANTS],
+  4: [...DAY4_APPLICANTS, ...DAY4_EXTRA_APPLICANTS, ...DAY4_POOL_APPLICANTS, ...DAY4_POOL2_APPLICANTS],
+  5: [...DAY5_APPLICANTS, ...DAY5_EXTRA_APPLICANTS, ...DAY5_POOL_APPLICANTS, ...DAY5_POOL2_APPLICANTS],
 }
 
 export const ALL_APPLICANTS: Applicant[] = [
@@ -75,6 +90,11 @@ export const ALL_PASSPORTS: Record<string, Passport> = {
   ...DAY3_POOL_PASSPORTS,
   ...DAY4_POOL_PASSPORTS,
   ...DAY5_POOL_PASSPORTS,
+  ...DAY1_POOL2_PASSPORTS,
+  ...DAY2_POOL2_PASSPORTS,
+  ...DAY3_POOL2_PASSPORTS,
+  ...DAY4_POOL2_PASSPORTS,
+  ...DAY5_POOL2_PASSPORTS,
   [PRESETH_ID]: PRESETH_PASSPORT,
 }
 
@@ -93,6 +113,11 @@ export const ALL_DOSSIERS: Record<string, Dossier> = {
   ...DAY3_POOL_DOSSIERS,
   ...DAY4_POOL_DOSSIERS,
   ...DAY5_POOL_DOSSIERS,
+  ...DAY1_POOL2_DOSSIERS,
+  ...DAY2_POOL2_DOSSIERS,
+  ...DAY3_POOL2_DOSSIERS,
+  ...DAY4_POOL2_DOSSIERS,
+  ...DAY5_POOL2_DOSSIERS,
   普瑞塞斯: PRESETH_DOSSIER,
 }
 

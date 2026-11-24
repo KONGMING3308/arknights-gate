@@ -17,6 +17,7 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     route: '阿戈尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'specter-d1p': {
     number: 'RI-1002-607',
@@ -27,6 +28,7 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     route: '阿戈尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'platinum-d1p': {
     number: 'RI-1003-114',
@@ -37,6 +39,7 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     route: '卡西米尔 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'bluepoison-d1p': {
     number: 'RI-1004-121',
@@ -46,7 +49,8 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     expiryDate: '1097-01-13',
     route: '未知地区 → 罗德岛本舰',
     stampType: 'smudged',
-    sealText: '罗德岛人事部',
+    sealText: '污损，无法辨认',
+    sealId: 'smudged',
   },
   'ptilopsis-d1p': {
     number: 'RI-1005-128',
@@ -57,6 +61,7 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     route: '哥伦比亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'liskarm-d1p': {
     number: 'RI-1006-135',
@@ -67,6 +72,7 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     route: '瓦伊凡 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'pramanix-d1p': {
     number: 'RI-1007-142',
@@ -77,6 +83,7 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     route: '谢拉格 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'cliffheart-d1p': {
     number: 'RI-1008-149',
@@ -86,7 +93,8 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     expiryDate: '1097-01-17',
     route: '谢拉格 → 罗德岛本舰',
     stampType: 'clear',
-    sealText: '罗德岛人事部',
+    sealText: '罗德岛人事部（形制不符）',
+    sealId: 'fake',
   },
   'matterhorn-d1p': {
     number: 'RI-1009-156',
@@ -97,6 +105,7 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     route: '谢拉格 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'cuora-d1p': {
     number: 'RI-1010-163',
@@ -107,5 +116,6 @@ export const DAY1_POOL_PASSPORTS: Record<string, Passport> = {
     route: '未知地区 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }

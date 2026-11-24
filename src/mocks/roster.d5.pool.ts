@@ -12,10 +12,10 @@ export const DAY5_POOL_APPLICANTS: Applicant[] = [
     id: 'greyy-d5p', codeName: '灰喉', portrait: 'greyy.png',
     race: '黎博利', origin: '未公开', occupation: '狙击干员',
     kind: 'operator', day: 5, slot: 0,
-    intent: '返舰报到', recommender: '银灰',
+    intent: '返舰报到', recommender: '塞雷娅',
     dialogue: [
       { question: '代号', answer: '灰喉，材料齐了，你过目便是。' }, { question: '来意', answer: '最后一趟外派结束，往后不走了。' },
-      { question: '担保人', answer: '银灰签的字，他比谁都清楚我。' },
+      { question: '担保人', answer: '塞雷娅签的字，她比谁都清楚我。' },
     ],
     passportNumber: 'RI-5001-100', dossierNumber: 'RI-5001-100', photoMatch: true,
   },

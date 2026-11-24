@@ -18,6 +18,7 @@ const FILES = [
   'roster.d5.ts',
   'roster.d5.extra.ts',
   'roster.d1.pool.ts','roster.d2.pool.ts','roster.d3.pool.ts','roster.d4.pool.ts','roster.d5.pool.ts',
+  'roster.d1.pool2.ts','roster.d2.pool2.ts','roster.d3.pool2.ts','roster.d4.pool2.ts','roster.d5.pool2.ts',
 ]
 
 /** 收集所有可能的人名（剧本代号 + 名录 + 常见干员） */

@@ -13,7 +13,7 @@ export const DAY5_POOL_DOSSIERS: Record<string, Dossier> = {
     number: 'RI-5001-100',
     occupation: '狙击干员',
     origin: '未公开',
-    recommender: '银灰',
+    recommender: '塞雷娅',
     photo: 'greyy.png',
     status: 'active',
     requiredSeal: '罗德岛人事部',

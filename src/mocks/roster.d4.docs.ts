@@ -16,6 +16,7 @@ export const DAY4_PASSPORTS: Record<string, Passport> = {
     route: '哥伦比亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'exusiai-d4': {
     number: 'RI-5523-891',
@@ -26,6 +27,7 @@ export const DAY4_PASSPORTS: Record<string, Passport> = {
     route: '拉特兰 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'lappland-d4': {
     number: 'RI-6634-207',
@@ -36,6 +38,7 @@ export const DAY4_PASSPORTS: Record<string, Passport> = {
     route: '叙拉古 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'croissant-d4': {
     number: 'RI-9918-445',
@@ -46,6 +49,7 @@ export const DAY4_PASSPORTS: Record<string, Passport> = {
     route: '米诺斯 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'silverash-d4': {
     number: 'RI-2207-668',
@@ -56,6 +60,7 @@ export const DAY4_PASSPORTS: Record<string, Passport> = {
     route: '谢拉格 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }
 

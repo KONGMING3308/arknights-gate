@@ -105,6 +105,9 @@ for (const a of applicants) {
   const dNum = pick(d, /number: '([^']+)'/)
   const seal = pick(p, /sealText: '([^']+)'/)
   const stampType = pick(p, /stampType: '([^']+)'/)
+  const issueDate = pick(p, /issueDate: '([^']+)'/) ?? ''
+  const expiryDate = pick(p, /expiryDate: '([^']+)'/) ?? ''
+  const sealId = pick(p, /sealId: '([^']+)'/) ?? ''
   const requiredSeal = pick(d, /requiredSeal: '([^']+)'/)
   const dOcc = pick(d, /occupation: '([^']+)'/)
   const dStatus = pick(d, /status: '([^']+)'/)
@@ -113,14 +116,16 @@ for (const a of applicants) {
   const checks = []
   if (pNum !== dNum && !dNote) checks.push('编号')
   if (pNum !== dNum && dNote) checks.push('编号差异(有换发备注✓)')
-  if (stampType === 'smudged') checks.push('印章污损')
-  if (stampType === 'missing') checks.push('印章缺失')
-  if (stampType === 'clear' && seal !== requiredSeal) checks.push('印章机构')
+  if (sealId === 'smudged' || stampType === 'smudged') checks.push('印章污损')
+  if (sealId === 'none' || stampType === 'missing') checks.push('印章缺失')
+  if (['wrong_dept', 'foreign', 'fake'].includes(sealId)) checks.push('印章不符(' + sealId + ')')
+  else if (stampType === 'clear' && seal !== requiredSeal && !sealId) checks.push('印章机构')
   if (!a.photoMatch) checks.push('照片')
   if (a.occupation !== dOcc) checks.push('职业')
   if (!registry.has(a.recommender)) checks.push('担保人不在册')
   if (dStatus !== 'active') checks.push('档案状态')
   if (a.dialogueConflict) checks.push('言行')
+  if (issueDate && expiryDate && issueDate >= expiryDate) checks.push('日期倒置')
 
   const row = [
     a.day,

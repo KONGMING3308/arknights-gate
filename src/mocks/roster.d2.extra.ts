@@ -62,6 +62,7 @@ export const DAY2_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '维多利亚 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
   'gavial-d2': {
     number: 'RI-1202-006',
@@ -72,6 +73,7 @@ export const DAY2_EXTRA_PASSPORTS: Record<string, Passport> = {
     route: '萨尔贡 → 罗德岛本舰',
     stampType: 'clear',
     sealText: '罗德岛人事部',
+    sealId: 'standard',
   },
 }
 

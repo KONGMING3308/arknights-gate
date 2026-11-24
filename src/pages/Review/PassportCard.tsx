@@ -8,6 +8,7 @@ import Stamp from '@/components/Stamp'
 import { ISSUER_LINE, PASSPORT_COPY, REVIEW_SCREEN } from '@/constants/copy'
 import type { Applicant, Passport, VerdictAction } from '@/types'
 import { asset } from '@/utils/asset'
+import { resolveSealId } from '@/utils/compare'
 
 interface PassportCardProps {
   passport: Passport
@@ -29,7 +30,7 @@ export default function PassportCard({
   verdict = null,
   hintsEnabled = false,
 }: PassportCardProps) {
-  const sealTone = passport.stampType === 'clear' ? 'approve' : 'forged'
+  const sealId = resolveSealId(passport)
   const verdictStamp = verdict ? VERDICT_STAMP[verdict] : null
   const flagPhoto = hintsEnabled && !applicant.photoMatch
 
@@ -81,18 +82,22 @@ export default function PassportCard({
         </dl>
       </div>
 
-      <footer className="mt-3 flex items-end justify-between border-t border-ink-900/25 pt-2">
+      <footer className="mt-3 flex items-end justify-between border-t border-ink-900/25 gap-2 pt-2">
         <div className="text-[10px] text-ink-900/55">
           <p>{REVIEW_SCREEN.fieldLabel.seal}</p>
-          <p className="mt-0.5 font-mono text-[10px] text-ink-900/80">{passport.sealText}</p>
+          <p className="mt-0.5 text-[10px] leading-tight text-ink-900/70">
+            {sealId === 'none' ? PASSPORT_COPY.noStamp : PASSPORT_COPY.sealHint}
+          </p>
         </div>
-        {passport.stampType === 'missing' ? (
-          <span className="text-[10px] text-danger">{PASSPORT_COPY.noStamp}</span>
+        {sealId === 'none' ? (
+          <span className="shrink-0 rounded-sm border border-danger/60 px-2 py-1 text-[10px] font-semibold tracking-widest text-danger">
+            {PASSPORT_COPY.noStamp}
+          </span>
         ) : (
-          <Stamp
-            type={sealTone}
-            text={passport.stampType === 'smudged' ? PASSPORT_COPY.smudged : PASSPORT_COPY.entry}
-            small
+          <img
+            src={asset(`assets/seals/seal_${sealId}.png`)}
+            alt="入境章"
+            className="h-20 w-20 shrink-0 -rotate-6 object-contain opacity-90 mix-blend-multiply"
           />
         )}
       </footer>

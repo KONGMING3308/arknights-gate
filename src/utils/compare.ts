@@ -3,8 +3,18 @@
  * 输入：申请人、通行证、档案。输出：破绽列表。
  * 依赖：@/types
  */
-import type { Applicant, Discrepancy, Dossier, Passport } from '@/types'
+import type { Applicant, Discrepancy, Dossier, Passport, SealId } from '@/types'
 import { isRegisteredRecommender } from '@/constants/registry'
+
+/** 根据 stampType / sealText 推断印章图案（老数据兼容） */
+export function resolveSealId(passport: Passport): SealId {
+  if (passport.sealId) return passport.sealId
+  if (passport.stampType === 'missing') return 'none'
+  if (passport.stampType === 'smudged') return 'smudged'
+  if (passport.sealText === '罗德岛人事部') return 'standard'
+  if (passport.sealText.includes('后勤')) return 'wrong_dept'
+  return 'foreign'
+}
 
 export function buildDiscrepancies(
   applicant: Applicant,
@@ -23,26 +33,52 @@ export function buildDiscrepancies(
     })
   }
 
-  if (passport.stampType === 'missing') {
+  // 印章：按图案判断，玩家需要看图辨认
+  const sealId = resolveSealId(passport)
+  if (sealId === 'none') {
     list.push({
       field: '印章',
       expected: dossier.requiredSeal,
       actual: '缺失',
       hint: '通行证上根本没有入境章。',
     })
-  } else if (passport.stampType === 'smudged') {
+  } else if (sealId === 'smudged') {
     list.push({
       field: '印章',
       expected: dossier.requiredSeal,
       actual: '污损，无法辨认',
       hint: '印章糊成一团，看不出是哪个机构盖的。',
     })
-  } else if (passport.sealText !== dossier.requiredSeal) {
+  } else if (sealId === 'wrong_dept') {
     list.push({
       field: '印章',
       expected: dossier.requiredSeal,
-      actual: passport.sealText,
-      hint: '盖章机构与罗德岛要求的不一致。',
+      actual: '罗德岛后勤部',
+      hint: '章上的机构名是「后勤部」，不是人事部。',
+    })
+  } else if (sealId === 'foreign') {
+    list.push({
+      field: '印章',
+      expected: dossier.requiredSeal,
+      actual: '其他机构',
+      hint: '这枚章根本不属于罗德岛。',
+    })
+  } else if (sealId === 'fake') {
+    list.push({
+      field: '印章',
+      expected: dossier.requiredSeal,
+      actual: '形制不符',
+      hint: '章上机构名没错，但边框、字距、中心纹样都与本舰标准章不同。',
+    })
+  }
+
+  // 签发日期必须早于到期日期
+  if (passport.issueDate >= passport.expiryDate) {
+    list.push({
+      field: '日期',
+      expected: '签发日期早于到期日期',
+      actual: `签发 ${passport.issueDate} / 到期 ${passport.expiryDate}`,
+      hint: '这张通行证的签发日期比到期日期还晚，日期本身就对不上。',
     })
   }
 
