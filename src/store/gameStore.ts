@@ -43,7 +43,8 @@ const initialState: GameState = {
   trust: INITIAL_STAT,
   phase: 'title',
   records: [],
-  hintsEnabled: true,
+  // 默认关闭：让玩家在无提示的情况下自行比对材料，需要时再手动开启
+  hintsEnabled: false,
 }
 
 export const useGameStore = create<GameStore>()(
@@ -135,6 +136,16 @@ export const useGameStore = create<GameStore>()(
     }),
     {
       name: 'arknights-gate-save',
+      // v2：新手提示改为默认关闭，老存档一并重置一次
+      version: 2,
+      migrate: (persisted, version) => {
+        const state = persisted as Partial<GameState> | undefined
+        if (!state) return persisted as never
+        if (version < 2) {
+          return { ...state, hintsEnabled: false }
+        }
+        return state as never
+      },
       partialize: (state) => ({
         day: state.day,
         slotIndex: state.slotIndex,

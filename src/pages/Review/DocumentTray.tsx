@@ -19,7 +19,7 @@ export default function DocumentTray({
   applicant,
   passport,
   verdict = null,
-  hintsEnabled = true,
+  hintsEnabled = false,
 }: DocumentTrayProps) {
   return (
     <div className="flex h-full flex-col">

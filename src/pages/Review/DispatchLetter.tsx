@@ -14,7 +14,7 @@ interface DispatchLetterProps {
   hintsEnabled?: boolean
 }
 
-export default function DispatchLetter({ applicant, hintsEnabled = true }: DispatchLetterProps) {
+export default function DispatchLetter({ applicant, hintsEnabled = false }: DispatchLetterProps) {
   const sponsorValid = isRegisteredRecommender(applicant.recommender)
   const showWarning = hintsEnabled && !sponsorValid
 

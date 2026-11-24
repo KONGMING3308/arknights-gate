@@ -26,7 +26,17 @@ page.on('console', (m) => {
 })
 
 await page.goto(BASE + '/', { waitUntil: 'networkidle2' })
-await page.evaluate(() => localStorage.clear())
+// 新手提示现在默认关闭，自动通关测试需要先手动开启（存档里直接置为 true）
+await page.evaluate(() => {
+  localStorage.clear()
+  localStorage.setItem(
+    'arknights-gate-save',
+    JSON.stringify({
+      state: { day: 1, slotIndex: 0, safety: 100, trust: 100, records: [], hintsEnabled: true, phase: 'review' },
+      version: 2,
+    }),
+  )
+})
 await page.goto(BASE + '/review', { waitUntil: 'networkidle2' })
 await sleep(1500)
 
@@ -62,18 +72,20 @@ for (let day = 1; day <= 5; day += 1) {
     await click('调取档案')
     await sleep(980)
 
-    // 读游戏自己算出的破绽数（最可靠）
-    const hint = await page.evaluate(() => {
-      const t = document.body.innerText.match(/已发现\s*(\d+)\s*处破绽/)
-      return t ? Number(t[1]) : -1
+    // 读游戏自己算出的破绽数（最可靠）+ 是否有人事备注
+    const info = await page.evaluate(() => {
+      const txt = document.body.innerText
+      const m = txt.match(/已发现\s*(\d+)\s*处破绽/)
+      return { hint: m ? Number(m[1]) : -1, hasNote: txt.includes('人事备注') }
     })
     const isAnomaly = name === '普瑞塞斯'
-    const shouldReject = !isAnomaly && hint > 0
+    // 正确打法：档案有换发备注 → 编号差异属正常，应批准；其余有破绽则拒
+    const shouldReject = !isAnomaly && !info.hasNote && info.hint > 0
 
     if (shouldReject) await click('拒绝入境')
     else await click('批准入境')
 
-    log.push({ day, name, hint, verdict: shouldReject ? 'reject' : 'approve' })
+    log.push({ day, name, hint: info.hint, note: info.hasNote, verdict: shouldReject ? 'reject' : 'approve' })
 
     // 处理突脸事件
     await sleep(650)

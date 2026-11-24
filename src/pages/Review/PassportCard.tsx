@@ -27,7 +27,7 @@ export default function PassportCard({
   passport,
   applicant,
   verdict = null,
-  hintsEnabled = true,
+  hintsEnabled = false,
 }: PassportCardProps) {
   const sealTone = passport.stampType === 'clear' ? 'approve' : 'forged'
   const verdictStamp = verdict ? VERDICT_STAMP[verdict] : null
