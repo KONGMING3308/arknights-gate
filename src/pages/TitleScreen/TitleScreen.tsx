@@ -5,7 +5,14 @@
  */
 import { useNavigate } from 'react-router-dom'
 import Button from '@/components/Button'
-import { APP_SUBTITLE, APP_TITLE, FOOTER_TEXT, HINT_LABEL, TITLE_SCREEN } from '@/constants/copy'
+import {
+  APP_SUBTITLE,
+  APP_TITLE,
+  APP_VERSION,
+  FOOTER_TEXT,
+  HINT_LABEL,
+  TITLE_SCREEN,
+} from '@/constants/copy'
 import { useGameStore } from '@/store/gameStore'
 import BriefingNotice from './BriefingNotice'
 
@@ -33,7 +40,12 @@ export default function TitleScreen() {
     <main className="flex min-h-full items-center justify-center bg-ink-900 px-6 py-12">
       <div className="w-full max-w-2xl">
         <p className="mb-3 font-mono text-[11px] tracking-[0.5em] text-gold-500/70">{APP_SUBTITLE}</p>
-        <h1 className="mb-6 text-5xl font-bold tracking-[0.12em] text-gold-300">{APP_TITLE}</h1>
+        <div className="mb-6 flex items-baseline gap-3">
+          <h1 className="text-5xl font-bold tracking-[0.12em] text-gold-300">{APP_TITLE}</h1>
+          <span className="rounded-sm border border-gold-500/50 px-2 py-0.5 font-mono text-xs tracking-widest text-gold-400">
+            {APP_VERSION}
+          </span>
+        </div>
 
         <BriefingNotice />
 
@@ -59,7 +71,9 @@ export default function TitleScreen() {
           </button>
         </div>
 
-        <p className="mt-8 font-mono text-[10px] tracking-widest text-gold-300/40">{FOOTER_TEXT}</p>
+        <p className="mt-8 font-mono text-[10px] tracking-widest text-gold-300/40">
+          {FOOTER_TEXT} · {APP_VERSION}
+        </p>
       </div>
     </main>
   )

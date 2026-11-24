@@ -3,8 +3,9 @@
  * 输入：无。输出：文案常量。依赖：无。
  */
 
-export const APP_TITLE = '罗德岛入境审查'
+export const APP_TITLE = '这不是我的干员'
 export const APP_SUBTITLE = 'RHODES ISLAND · BORDER INSPECTION'
+export const APP_VERSION = 'v1.0'
 export const ISSUER_LINE = 'RHODES ISLAND'
 
 export const ACTION_LABEL = {

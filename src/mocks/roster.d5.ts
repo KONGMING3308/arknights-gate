@@ -3,8 +3,8 @@
  *       伪造手法：多重破绽 + 对话矛盾。
  *       · 闪灵（入侵者）：passportNumber 与档案不一致；sealText 错误（"罗德岛后勤部"而非要求的"罗德岛人事部"）；
  *         担保人「洛肯」不在在册名录（申请人与档案一致，均为洛肯）。
- *       · 推进之王（入侵者）：photoMatch=false；dossier.status='revoked'；attacksWhenRejected=true。
- *       · 变形者集群（入侵者）：担保人「——」不在名录；编号全零且与档案不一致；无入境章；attacksWhenRejected=true。
+ *       · 推进之王（入侵者）：photoMatch=false；dossier.status='revoked'；突脸随机。
+ *       · 变形者集群（入侵者）：担保人「——」不在名录；编号全零且与档案不一致；无入境章；突脸随机。
  *       正常干员：夜莺、星熊、陈的通行证与档案完全自洽，零破绽（不使用「可疑假象」干扰项）。
  * 输入：无。输出：DAY5_APPLICANTS / DAY5_PASSPORTS / DAY5_DOSSIERS。
  * 依赖：@/types
@@ -117,7 +117,6 @@ export const DAY5_APPLICANTS: Applicant[] = [
     passportNumber: 'RI-6693-224',
     dossierNumber: 'RI-6693-224',
     photoMatch: false,
-    attacksWhenRejected: true,
   },
 ]
 

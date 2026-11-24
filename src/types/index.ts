@@ -50,8 +50,8 @@ export interface Applicant {
   /** 护照照片与本人是否一致 */
   photoMatch: boolean
   /**
-   * 被拒绝时是否会暴起「突脸」（触发 S.W.E.E.P. 事件）。
-   * 只有部分入侵者具备，默认 false。
+   * 「拒绝时必定突脸」标记。
+   * 目前只有变形者集群为 true；其余入侵者被拒绝时按 SWEEP.chance 随机触发。
    */
   attacksWhenRejected?: boolean
   /** 所有证件信息均为乱码（普瑞塞斯），无法按常规规则判断 */

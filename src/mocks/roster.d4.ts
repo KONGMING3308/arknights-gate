@@ -1,7 +1,7 @@
 /**
  * 用途：第 4 天 Mock 剧本数据（5 人，2 名入侵者）。
  *       伪造手法：冒名在册干员——入侵者顶替真实在册干员身份。
- *       · 能天使（入侵者）：passportNumber 与档案不一致（RI-5523-891 vs RI-5523-819），且 photoMatch=false。
+ *       · 能天使（入侵者）：passportNumber 与档案不一致（RI-5523-891 vs RI-5523-819），且 photoMatch=false。（突脸由随机决定）
  *       · 可颂（入侵者）：档案 status='active' 但 photoMatch=false 且 passportNumber 与档案不一致。
  *       印章均清晰，不提供印章维度破绽。
  * 输入：无。输出：DAY4_APPLICANTS / DAY4_PASSPORTS / DAY4_DOSSIERS。
@@ -52,7 +52,6 @@ id: 'exusiai-d4',
     passportNumber: 'RI-5523-891',
     dossierNumber: 'RI-5523-891',
     photoMatch: false,
-    attacksWhenRejected: true,
   },
   {
     id: 'lappland-d4',

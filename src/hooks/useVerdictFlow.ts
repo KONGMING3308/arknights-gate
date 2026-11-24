@@ -9,6 +9,18 @@ import { SWEEP } from '@/constants/game'
 import type { Applicant, VerdictAction } from '@/types'
 import { playStamp } from '@/utils/audio'
 
+/**
+ * 判断这次「拒绝」是否触发突脸事件。
+ * - 非入侵者（正常干员 / 普瑞塞斯等异常）永不触发
+ * - 变形者集群（attacksWhenRejected）必定触发
+ * - 其余入侵者按 SWEEP.chance 随机触发，让同一角色的重玩体验不同
+ */
+function shouldTriggerSweep(applicant: Applicant): boolean {
+  if (applicant.kind !== 'impostor') return false
+  if (applicant.attacksWhenRejected) return true
+  return Math.random() < SWEEP.chance
+}
+
 interface VerdictFlowOptions {
   applicant: Applicant | null
   applyVerdict: (
@@ -77,8 +89,9 @@ export function useVerdictFlow({
   const settle = useCallback(
     (action: VerdictAction) => {
       if (!applicant || settledRef.current === applicant.id) return
-      // 拒绝会「突脸」的入侵者：先进入求援事件，不直接结算
-      if (action === 'reject' && applicant.attacksWhenRejected) {
+      // 拒绝入侵者时可能触发「突脸」：
+      // 变形者集群一律触发，其余入侵者按 SWEEP.chance 随机
+      if (action === 'reject' && shouldTriggerSweep(applicant)) {
         setSweep(applicant)
         return
       }
