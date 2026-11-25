@@ -149,7 +149,7 @@ export default function ReviewScreen() {
       <ReviewTabs value={tab} onChange={setTab} />
 
       <div className={GRID_CLASS}>
-        <div className={[panelVisibility(tab, 'documents'), 'md:tall:col-start-1'].join(' ')}>
+        <div className={[panelVisibility(tab, 'documents'), 'md:tall:col-start-1 md:tall:row-start-1 xl:tall:col-start-2 xl:tall:row-start-1'].join(' ')}>
           <DocumentTray
             applicant={applicant}
             passport={passport}
@@ -160,10 +160,10 @@ export default function ReviewScreen() {
 
         {/* 手机端 contents 回到单列分段；md 右列竖排两块各自滚动；xl 拆回三栏 */}
         <div className="contents md:tall:col-start-2 md:tall:flex md:tall:min-h-0 md:tall:flex-col md:tall:gap-3 xl:tall:contents">
-          <div className={[panelVisibility(tab, 'applicant'), 'md:tall:min-h-0 md:tall:flex-1'].join(' ')}>
+          <div className={[panelVisibility(tab, 'applicant'), 'md:tall:min-h-0 md:tall:flex-1 xl:tall:col-start-1 xl:tall:row-start-1'].join(' ')}>
             <ApplicantWindow applicant={applicant} asked={asked} onAsk={handleAsk} />
           </div>
-          <div className={[panelVisibility(tab, 'dossier'), 'md:tall:min-h-0 md:tall:flex-1'].join(' ')}>
+          <div className={[panelVisibility(tab, 'dossier'), 'md:tall:min-h-0 md:tall:flex-1 xl:tall:col-start-3 xl:tall:row-start-1'].join(' ')}>
             <DossierPanel
               applicant={applicant}
               dossier={dossier}
