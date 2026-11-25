@@ -19,7 +19,7 @@ export default function DispatchLetter({ applicant, hintsEnabled = false }: Disp
   const showWarning = hintsEnabled && !sponsorValid
 
   return (
-    <article className="relative -rotate-1 rounded-sm border border-ink-900/20 bg-[linear-gradient(165deg,#e8dfc8_0%,#ded3b6_100%)] p-3 text-ink-900 shadow-seal">
+    <article className="relative -rotate-1 rounded-sm border border-ink-900/20 bg-[linear-gradient(165deg,#e8dfc8_0%,#ded3b6_100%)] p-2.5 text-ink-900 shadow-seal sm:p-3">
       <header className="mb-2 flex items-baseline justify-between border-b border-ink-900/25 pb-1">
         <h3 className="text-[11px] font-bold tracking-[0.2em]">{DISPATCH_COPY.title}</h3>
         <span className="font-mono text-[10px] text-ink-900/45">{DISPATCH_COPY.form}</span>

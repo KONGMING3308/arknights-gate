@@ -71,7 +71,7 @@ export default function SweepEvent({ attacker, onResolved }: SweepEventProps) {
           key={hand.cls}
           src={asset('assets/events/reaching_hand.png')}
           alt=""
-          className={`pointer-events-none absolute h-[70vh] w-auto animate-reach opacity-80 ${hand.cls}`}
+          className={`pointer-events-none absolute h-[54vh] w-auto animate-reach opacity-80 sm:h-[70vh] ${hand.cls}`}
           style={{ animationDelay: hand.delay }}
         />
       ))}
@@ -84,9 +84,9 @@ export default function SweepEvent({ attacker, onResolved }: SweepEventProps) {
           <img
             src={asset('assets/events/ascalon.png')}
             alt="阿斯卡纶"
-            className="absolute bottom-0 left-1/2 h-[92vh] w-auto -translate-x-1/2 object-contain opacity-95 mix-blend-screen"
+            className="absolute bottom-0 left-1/2 h-[80vh] w-auto -translate-x-1/2 object-contain opacity-95 mix-blend-screen sm:h-[92vh]"
           />
-          <div className="relative z-10 mx-6 max-w-lg animate-rise rounded-sm border border-gold-500/40 bg-ink-900/85 px-8 py-6 text-center shadow-panel">
+          <div className="relative z-10 mx-4 max-w-lg animate-rise rounded-sm border border-gold-500/40 bg-ink-900/85 px-5 py-5 text-center shadow-panel sm:mx-6 sm:px-8 sm:py-6">
             <p className="font-mono text-[10px] tracking-[0.4em] text-gold-500/70">S.W.E.E.P.</p>
             <p className="mt-3 text-lg font-semibold tracking-widest text-gold-300">
               {SWEEP_COPY.successTitle}
@@ -99,7 +99,7 @@ export default function SweepEvent({ attacker, onResolved }: SweepEventProps) {
       {/* 失败 */}
       {result === 'fail' && (
         <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#05070a]/90">
-          <div className="animate-rise text-center">
+          <div className="animate-rise px-4 text-center">
             <p className="text-lg font-semibold tracking-widest text-danger">{SWEEP_COPY.failTitle}</p>
             <p className="mt-2 text-sm text-gold-300/60">{SWEEP_COPY.failBody}</p>
           </div>
@@ -109,14 +109,14 @@ export default function SweepEvent({ attacker, onResolved }: SweepEventProps) {
       {/* HUD：进度与呼叫按钮 */}
       {!result && (
         <>
-          <div className="pointer-events-none absolute inset-x-0 top-0 px-6 py-5">
+          <div className="pointer-events-none absolute inset-x-0 top-0 px-4 py-4 sm:px-6 sm:py-5">
             <p className="animate-pulse text-center font-mono text-sm tracking-[0.35em] text-danger">
               {SWEEP_COPY.alert}
             </p>
             <p className="mt-1 text-center font-mono text-[10px] tracking-[0.25em] text-gold-300/45">
               {attacker.codeName}
             </p>
-            <div className="mx-auto mt-3 h-1 w-64 overflow-hidden rounded-full bg-white/10">
+            <div className="mx-auto mt-3 h-1 w-56 overflow-hidden rounded-full bg-white/10 sm:w-64">
               <div
                 className="h-full rounded-full bg-danger transition-all duration-150"
                 style={{ width: `${progress * 100}%` }}
@@ -128,7 +128,7 @@ export default function SweepEvent({ attacker, onResolved }: SweepEventProps) {
             <button
               type="button"
               onClick={tap}
-              className="animate-pulseRing rounded-sm border-2 border-danger bg-danger/15 px-10 py-4 text-lg font-bold tracking-[0.2em] text-danger transition-transform active:scale-95"
+              className="animate-pulseRing rounded-sm border-2 border-danger bg-danger/15 px-8 py-3.5 text-base font-bold tracking-[0.2em] text-danger transition-transform active:scale-95 sm:px-10 sm:py-4 sm:text-lg"
             >
               {SWEEP_COPY.call}
             </button>

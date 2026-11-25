@@ -27,21 +27,21 @@ export default function DayEndScreen() {
   }
 
   return (
-    <main className="flex min-h-full items-center justify-center bg-ink-900 px-6 py-12">
+    <main className="flex min-h-dvh items-center justify-center bg-ink-900 px-4 py-8 sm:px-6 sm:py-12">
       <div className="w-full max-w-xl">
         <p className="font-mono text-[11px] tracking-[0.4em] text-gold-500/70">
           {DAY_END.kicker} {day}
         </p>
-        <h1 className="mt-2 text-3xl font-bold tracking-widest text-gold-300">{DAY_END.title}</h1>
+        <h1 className="mt-2 text-2xl font-bold tracking-widest text-gold-300 sm:text-3xl">{DAY_END.title}</h1>
 
-        <div className="mt-6 grid grid-cols-2 gap-3">
-          <div className="rounded-sm border border-safety/30 bg-safety/5 p-4">
+        <div className="mt-6 grid grid-cols-2 gap-2 sm:gap-3">
+          <div className="rounded-sm border border-safety/30 bg-safety/5 p-3 sm:p-4">
             <p className="text-[11px] tracking-[0.3em] text-safety/75">{DAY_END.safety}</p>
-            <p className="mt-1 font-mono text-3xl text-safety">{safety}</p>
+            <p className="mt-1 font-mono text-2xl text-safety sm:text-3xl">{safety}</p>
           </div>
-          <div className="rounded-sm border border-trust/30 bg-trust/5 p-4">
+          <div className="rounded-sm border border-trust/30 bg-trust/5 p-3 sm:p-4">
             <p className="text-[11px] tracking-[0.3em] text-trust/75">{DAY_END.trust}</p>
-            <p className="mt-1 font-mono text-3xl text-trust">{trust}</p>
+            <p className="mt-1 font-mono text-2xl text-trust sm:text-3xl">{trust}</p>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export default function DayEndScreen() {
           </h2>
           <ul className="divide-y divide-gold-500/10 border-y border-gold-500/10">
             {todayRecords.map((r) => (
-              <li key={r.applicantId} className="flex items-center justify-between py-2 text-xs">
+              <li key={r.applicantId} className="flex items-center justify-between gap-2 py-2 text-[11px] sm:text-xs">
                 <span className="text-gold-300/90">{r.codeName}</span>
                 <span className="flex items-center gap-3">
                   <span className="text-gold-300/50">{RESULT_TEXT[r.action]}</span>

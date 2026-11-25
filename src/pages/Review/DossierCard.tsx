@@ -19,7 +19,7 @@ const STATUS_STYLE = {
 
 export default function DossierCard({ dossier }: DossierCardProps) {
   return (
-    <article className="paper-dark relative rounded-sm border border-gold-500/20 p-3">
+    <article className="paper-dark relative rounded-sm border border-gold-500/20 p-2.5 sm:p-3">
       <header className="mb-2 flex items-baseline justify-between border-b border-gold-500/20 pb-1.5">
         <h3 className="text-[11px] font-bold uppercase tracking-[0.25em] text-gold-400">
           {REVIEW_SCREEN.dossier}
@@ -32,7 +32,7 @@ export default function DossierCard({ dossier }: DossierCardProps) {
       </header>
 
       <div className="flex gap-3">
-        <div className="h-24 w-20 shrink-0 overflow-hidden rounded-sm border border-gold-500/20 bg-ink-800">
+        <div className="h-20 w-16 shrink-0 overflow-hidden rounded-sm border border-gold-500/20 bg-ink-800 sm:h-24 sm:w-20">
           <img
             src={asset(`assets/portraits/${dossier.photo}`)}
             alt={dossier.codeName}

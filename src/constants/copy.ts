@@ -5,7 +5,7 @@
 
 export const APP_TITLE = '这不是我的干员'
 export const APP_SUBTITLE = 'RHODES ISLAND · BORDER INSPECTION'
-export const APP_VERSION = 'v1.1'
+export const APP_VERSION = 'v1.2'
 export const ISSUER_LINE = 'RHODES ISLAND'
 
 export const ACTION_LABEL = {
@@ -75,6 +75,9 @@ export const REVIEW_SCREEN = {
   compareHint: '点开两侧材料，自行核对。破绽不会自动标红。',
   dialogue: '询问',
   asked: '已问',
+  tabApplicant: '申请人',
+  tabDocuments: '证件',
+  tabDossier: '档案',
   fieldLabel: {
     number: '编号',
     holderName: '姓名',

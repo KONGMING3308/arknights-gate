@@ -14,14 +14,18 @@ interface StationHeaderProps {
 
 export default function StationHeader({ day, slotIndex, total }: StationHeaderProps) {
   return (
-    <div className="flex items-center gap-5">
-      <div className="flex items-center gap-3 border-r border-gold-500/20 pr-5">
-        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-gold-500/50">
+    <div className="flex min-w-0 items-center gap-3 lg:gap-5">
+      <div className="flex items-center gap-2 border-r border-gold-500/20 pr-3 md:gap-3 md:pr-5">
+        <span className="hidden h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold-500/50 sm:flex">
           <span className="h-2.5 w-2.5 rounded-full bg-danger" />
         </span>
-        <div className="leading-tight">
-          <p className="font-mono text-[9px] tracking-[0.35em] text-gold-500/70">{APP_SUBTITLE}</p>
-          <p className="text-sm font-semibold tracking-[0.2em] text-gold-300">{STATION_COPY.name}</p>
+        <div className="min-w-0 leading-tight">
+          <p className="hidden whitespace-nowrap font-mono text-[9px] tracking-[0.35em] text-gold-500/70 lg:block">
+            {APP_SUBTITLE}
+          </p>
+          <p className="whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-gold-300 sm:text-sm sm:tracking-[0.2em]">
+            {STATION_COPY.name}
+          </p>
         </div>
       </div>
       <DayHeader day={day} slotIndex={slotIndex} total={total} />

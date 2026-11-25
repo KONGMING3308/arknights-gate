@@ -41,7 +41,7 @@ export default function ApplicantWindow({ applicant, asked, onAsk }: ApplicantWi
       <div className="flex gap-3">
         <div
           className={[
-            'relative h-28 w-24 shrink-0 overflow-hidden rounded-sm border bg-ink-800',
+            'relative h-24 w-20 shrink-0 overflow-hidden rounded-sm border bg-ink-800 sm:h-28 sm:w-24',
             applicant.scrambled ? 'animate-glitch border-danger/60' : 'border-gold-500/30',
           ].join(' ')}
         >

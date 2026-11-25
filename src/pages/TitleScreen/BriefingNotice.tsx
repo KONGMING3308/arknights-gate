@@ -7,7 +7,7 @@ import { INTRO_NOTICE } from '@/constants/copy'
 
 export default function BriefingNotice() {
   return (
-    <article className="relative rounded-sm border border-gold-500/25 bg-ink-800/50 px-5 py-4">
+    <article className="relative rounded-sm border border-gold-500/25 bg-ink-800/50 px-4 py-3.5 sm:px-5 sm:py-4">
       <header className="mb-3 flex items-baseline justify-between border-b border-gold-500/20 pb-2">
         <h2 className="text-[11px] font-semibold tracking-[0.25em] text-gold-400">
           {INTRO_NOTICE.title}
@@ -19,7 +19,7 @@ export default function BriefingNotice() {
 
       <div className="space-y-2">
         {INTRO_NOTICE.paragraphs.map((line) => (
-          <p key={line} className="text-[13px] leading-relaxed text-gold-300/75">
+          <p key={line} className="text-[12px] leading-relaxed text-gold-300/75 sm:text-[13px]">
             {line}
           </p>
         ))}

@@ -35,7 +35,7 @@ export default function PassportCard({
   const flagPhoto = hintsEnabled && !applicant.photoMatch
 
   return (
-    <article className="paper relative rounded-sm p-3 shadow-seal">
+    <article className="paper relative rounded-sm p-2.5 shadow-seal sm:p-3">
       <header className="mb-2 flex items-baseline justify-between border-b border-ink-900/25 pb-1.5">
         <h3 className="text-[11px] font-bold uppercase tracking-[0.25em] text-ink-900/80">
           {REVIEW_SCREEN.passport} · {ISSUER_LINE}
@@ -46,7 +46,7 @@ export default function PassportCard({
       <div className="flex gap-3">
         <div
           className={[
-            'relative h-28 w-24 shrink-0 overflow-hidden rounded-sm border bg-ink-800',
+            'relative h-24 w-20 shrink-0 overflow-hidden rounded-sm border bg-ink-800 sm:h-28 sm:w-24',
             flagPhoto ? 'border-2 border-danger' : 'border-ink-900/30',
           ].join(' ')}
         >
@@ -97,7 +97,7 @@ export default function PassportCard({
           <img
             src={asset(`assets/seals/seal_${sealId}.png`)}
             alt="入境章"
-            className="h-20 w-20 shrink-0 -rotate-6 object-contain opacity-90 mix-blend-multiply"
+            className="h-16 w-16 shrink-0 -rotate-6 object-contain opacity-90 mix-blend-multiply sm:h-20 sm:w-20"
           />
         )}
       </footer>

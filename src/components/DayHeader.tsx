@@ -13,22 +13,23 @@ interface DayHeaderProps {
 
 export default function DayHeader({ day, slotIndex, total }: DayHeaderProps) {
   return (
-    <div className="flex items-center gap-4">
-      <div className="font-mono text-sm tracking-[0.3em] text-gold-400">
+    <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
+      <div className="whitespace-nowrap font-mono text-xs tracking-[0.2em] text-gold-400 sm:text-sm sm:tracking-[0.3em]">
         {REVIEW_SCREEN.dayPrefix} {day} {REVIEW_SCREEN.daySuffix}
       </div>
-      <div className="flex items-center gap-1.5">
+      {/* 进度点占宽较多，手机改为直接看「待审 x / y」 */}
+      <div className="hidden items-center gap-1.5 sm:flex">
         {Array.from({ length: total }).map((_, i) => (
           <span
             key={i}
             className={[
-              'h-1.5 w-6 rounded-sm',
+              'h-1.5 w-4 rounded-sm sm:w-6',
               i < slotIndex ? 'bg-gold-500/70' : i === slotIndex ? 'bg-gold-300' : 'bg-ink-600',
             ].join(' ')}
           />
         ))}
       </div>
-      <div className="text-[11px] tracking-widest text-gold-300/60">
+      <div className="whitespace-nowrap text-[10px] tracking-widest text-gold-300/60 sm:text-[11px]">
         {REVIEW_SCREEN.slotPrefix} {Math.min(slotIndex + 1, total)} / {total}
       </div>
     </div>

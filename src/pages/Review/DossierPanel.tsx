@@ -32,7 +32,7 @@ export default function DossierPanel({
   isAnomaly = false,
 }: DossierPanelProps) {
   return (
-    <aside className="flex h-full flex-col gap-3">
+    <aside className="flex h-full flex-col gap-3 overflow-auto">
       <div className="flex items-center justify-between">
         <p className="text-[10px] uppercase tracking-[0.3em] text-gold-500/60">
           {REVIEW_SCREEN.dossier}
@@ -47,7 +47,7 @@ export default function DossierPanel({
       {dossier ? (
         <DossierCard dossier={dossier} />
       ) : (
-        <div className="flex min-h-44 flex-1 items-center justify-center rounded-sm border border-dashed border-gold-500/20 px-4 text-center text-sm leading-relaxed text-gold-300/55">
+        <div className="flex min-h-36 flex-1 items-center justify-center sm:min-h-44 rounded-sm border border-dashed border-gold-500/20 px-4 text-center text-sm leading-relaxed text-gold-300/55">
           {loading ? REVIEW_SCREEN.dossierLoading : REVIEW_SCREEN.dossierEmpty}
         </div>
       )}

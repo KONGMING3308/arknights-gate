@@ -29,26 +29,26 @@ export default function EndingScreen() {
   }
 
   return (
-    <main className="flex min-h-full items-center justify-center bg-ink-900 px-6 py-12">
+    <main className="flex min-h-dvh items-center justify-center bg-ink-900 px-4 py-8 sm:px-6 sm:py-12">
       <div className="w-full max-w-xl text-center">
         <p className="font-mono text-[11px] tracking-[0.4em] text-gold-500/70">{ENDING.kicker}</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-widest text-gold-300">{ENDING.title}</h1>
+        <h1 className="mt-2 text-2xl font-bold tracking-widest text-gold-300 sm:text-3xl">{ENDING.title}</h1>
 
         {failed ? (
           <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-danger/90">{failReason}</p>
         ) : (
           <div className="mt-6">
             <p className="text-[11px] tracking-[0.4em] text-gold-500/60">{ENDING.grade}</p>
-            <p className="font-mono text-7xl text-gold-300">{grade}</p>
+            <p className="font-mono text-6xl text-gold-300 sm:text-7xl">{grade}</p>
           </div>
         )}
 
-        <div className="mt-6 grid grid-cols-2 gap-3 text-left">
-          <div className="rounded-sm border border-safety/30 bg-safety/5 p-4">
+        <div className="mt-6 grid grid-cols-2 gap-2 text-left sm:gap-3">
+          <div className="rounded-sm border border-safety/30 bg-safety/5 p-3 sm:p-4">
             <p className="text-[11px] tracking-[0.3em] text-safety/75">{ENDING.safety}</p>
             <p className="mt-1 font-mono text-2xl text-safety">{safety}</p>
           </div>
-          <div className="rounded-sm border border-trust/30 bg-trust/5 p-4">
+          <div className="rounded-sm border border-trust/30 bg-trust/5 p-3 sm:p-4">
             <p className="text-[11px] tracking-[0.3em] text-trust/75">{ENDING.trust}</p>
             <p className="mt-1 font-mono text-2xl text-trust">{trust}</p>
           </div>

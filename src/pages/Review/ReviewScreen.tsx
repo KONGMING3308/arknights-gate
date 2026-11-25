@@ -1,13 +1,13 @@
 /**
  * 用途：核心审查界面——三栏布局 + 处置 + 突脸求援事件，负责把数据流串起来。
+ *       响应式：手机单列分段（申请人 / 证件 / 档案），md 两栏，lg 起经典三栏。
  * 输入：store 中的天数/进度/数值。输出：可交互的审查台。
  * 依赖：react-router-dom, store, api, hooks, 子组件
  */
 import { useCallback, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import StatBar from '@/components/StatBar'
 import { ROSTER_SIZE } from '@/constants/game'
-import { HINT_LABEL, REVIEW_SCREEN } from '@/constants/copy'
+import { REVIEW_SCREEN } from '@/constants/copy'
 import { useHotkeys } from '@/hooks/useHotkeys'
 import { useDiscrepancies } from '@/hooks/useDiscrepancies'
 import { useVerdictFlow } from '@/hooks/useVerdictFlow'
@@ -19,8 +19,20 @@ import ActionBar from './ActionBar'
 import ApplicantWindow from './ApplicantWindow'
 import DocumentTray from './DocumentTray'
 import DossierPanel from './DossierPanel'
-import StationHeader from './StationHeader'
+import ReviewHeader from './ReviewHeader'
+import ReviewTabs, { type ReviewTab } from './ReviewTabs'
 import SweepEvent from './SweepEvent'
+
+/** 手机端只显示当前分段；md 起三块全部显示 */
+const panelVisibility = (active: ReviewTab, own: ReviewTab) =>
+  active === own ? 'min-h-0' : 'hidden min-h-0 md:tall:block'
+
+/** 手机单列 → md 证件在左、申请人与档案在右 → lg 起经典三栏 */
+const GRID_CLASS = [
+  'mx-auto grid w-full max-w-[1800px] min-h-0 flex-1 grid-cols-1 gap-3 bg-ink-900 p-3',
+  'md:tall:grid-cols-[minmax(0,1.5fr)_minmax(280px,1fr)]',
+  'xl:tall:grid-cols-[330px_minmax(0,1fr)_360px] 2xl:tall:grid-cols-[380px_minmax(0,1fr)_420px]',
+].join(' ')
 
 export default function ReviewScreen() {
   const navigate = useNavigate()
@@ -42,6 +54,7 @@ export default function ReviewScreen() {
   const [dossier, setDossier] = useState<Dossier | null>(null)
   const [asked, setAsked] = useState<string[]>([])
   const [loadingDossier, setLoadingDossier] = useState(false)
+  const [tab, setTab] = useState<ReviewTab>('applicant')
 
   const applicant = roster[slotIndex] ?? null
   const total = roster.length || ROSTER_SIZE[day]
@@ -116,61 +129,53 @@ export default function ReviewScreen() {
 
   if (!applicant) {
     return (
-      <main className="flex min-h-full items-center justify-center bg-ink-900 text-sm text-gold-300/50">
+      <main className="flex min-h-dvh items-center justify-center bg-ink-900 text-sm text-gold-300/50">
         {REVIEW_SCREEN.loadingRoster}
       </main>
     )
   }
 
   return (
-    <main className="flex min-h-full flex-col bg-ink-900">
-      <header className="flex items-center justify-between border-b border-gold-500/20 bg-ink-800/40 px-5 py-3">
-        <StationHeader day={day} slotIndex={slotIndex} total={total} />
-        <div className="flex items-center gap-5">
-          <button
-            type="button"
-            onClick={toggleHints}
-            className={[
-              'flex items-center gap-2 rounded-sm border px-2.5 py-1 text-[11px] transition-colors',
-              hintsEnabled
-                ? 'border-gold-500/60 bg-gold-500/10 text-gold-300'
-                : 'border-ink-600 text-gold-300/40',
-            ].join(' ')}
-            title={HINT_LABEL.master}
-          >
-            <span
-              className={[
-                'flex h-3.5 w-3.5 items-center justify-center rounded-[2px] border text-[9px]',
-                hintsEnabled ? 'border-gold-500 bg-gold-500 text-ink-900' : 'border-ink-600',
-              ].join(' ')}
-            >
-              {hintsEnabled ? '✓' : ''}
-            </span>
-            {HINT_LABEL.toggle}
-          </button>
-          <StatBar label={REVIEW_SCREEN.safety} value={safety} tone="safety" />
-          <StatBar label={REVIEW_SCREEN.trust} value={trust} tone="trust" />
-        </div>
-      </header>
+    <main className="flex min-h-dvh flex-col bg-ink-900 md:tall:h-dvh md:tall:overflow-hidden">
+      <ReviewHeader
+        day={day}
+        slotIndex={slotIndex}
+        total={total}
+        safety={safety}
+        trust={trust}
+        hintsEnabled={hintsEnabled}
+        onToggleHints={toggleHints}
+      />
+      <ReviewTabs value={tab} onChange={setTab} />
 
-      <div className="grid min-h-0 flex-1 grid-cols-[330px_1fr_360px] gap-3 bg-ink-900 p-3">
-        <ApplicantWindow applicant={applicant} asked={asked} onAsk={handleAsk} />
-        <DocumentTray
-          applicant={applicant}
-          passport={passport}
-          verdict={verdictOf(applicant)}
-          hintsEnabled={hintsEnabled}
-        />
-        <DossierPanel
-          applicant={applicant}
-          dossier={dossier}
-          loading={loadingDossier}
-          onFetch={handleFetchDossier}
-          discrepancyCount={discrepancies.length}
-          discrepancyFields={discrepancies.map((d) => d.field)}
-          hintsEnabled={hintsEnabled}
-          isAnomaly={applicant.kind === 'anomaly'}
-        />
+      <div className={GRID_CLASS}>
+        <div className={[panelVisibility(tab, 'documents'), 'md:tall:col-start-1'].join(' ')}>
+          <DocumentTray
+            applicant={applicant}
+            passport={passport}
+            verdict={verdictOf(applicant)}
+            hintsEnabled={hintsEnabled}
+          />
+        </div>
+
+        {/* 手机端 contents 回到单列分段；md 右列竖排两块各自滚动；xl 拆回三栏 */}
+        <div className="contents md:tall:col-start-2 md:tall:flex md:tall:min-h-0 md:tall:flex-col md:tall:gap-3 xl:tall:contents">
+          <div className={[panelVisibility(tab, 'applicant'), 'md:tall:min-h-0 md:tall:flex-1'].join(' ')}>
+            <ApplicantWindow applicant={applicant} asked={asked} onAsk={handleAsk} />
+          </div>
+          <div className={[panelVisibility(tab, 'dossier'), 'md:tall:min-h-0 md:tall:flex-1'].join(' ')}>
+            <DossierPanel
+              applicant={applicant}
+              dossier={dossier}
+              loading={loadingDossier}
+              onFetch={handleFetchDossier}
+              discrepancyCount={discrepancies.length}
+              discrepancyFields={discrepancies.map((d) => d.field)}
+              hintsEnabled={hintsEnabled}
+              isAnomaly={applicant.kind === 'anomaly'}
+            />
+          </div>
+        </div>
       </div>
 
       <ActionBar

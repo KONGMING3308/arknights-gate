@@ -30,26 +30,29 @@ export default function DocumentTray({
         <p className="font-mono text-[10px] tracking-widest text-gold-300/30">DESK · 01</p>
       </div>
 
-      <div className="relative flex flex-1 flex-col items-center justify-center gap-4 overflow-auto rounded-sm border border-gold-500/10 bg-[radial-gradient(ellipse_at_50%_45%,rgba(200,164,92,0.10),rgba(11,14,19,0)_65%)] px-4 py-6">
-        {passport ? (
-          <>
-            <div className="w-full max-w-xl animate-rise">
-              <PassportCard
-                passport={passport}
-                applicant={applicant}
-                verdict={verdict}
-                hintsEnabled={hintsEnabled}
-              />
+      {/* m-auto 让纸面在空间富余时居中、空间不足时从顶部开始（不会把顶部内容裁掉） */}
+      <div className="relative flex flex-1 flex-col overflow-auto rounded-sm border border-gold-500/10 bg-[radial-gradient(ellipse_at_50%_45%,rgba(200,164,92,0.10),rgba(11,14,19,0)_65%)]">
+        <div className="m-auto flex w-full max-w-xl flex-col items-center gap-3 px-2 py-3 sm:gap-4 sm:px-4 sm:py-6 xl:max-w-2xl 2xl:max-w-3xl">
+          {passport ? (
+            <>
+              <div className="w-full animate-rise">
+                <PassportCard
+                  passport={passport}
+                  applicant={applicant}
+                  verdict={verdict}
+                  hintsEnabled={hintsEnabled}
+                />
+              </div>
+              <div className="w-full animate-rise">
+                <DispatchLetter applicant={applicant} hintsEnabled={hintsEnabled} />
+              </div>
+            </>
+          ) : (
+            <div className="flex h-40 w-full items-center justify-center rounded-sm border border-dashed border-gold-500/20 text-xs text-gold-300/40">
+              {REVIEW_SCREEN.loadingPassport}
             </div>
-            <div className="w-full max-w-xl animate-rise">
-              <DispatchLetter applicant={applicant} hintsEnabled={hintsEnabled} />
-            </div>
-          </>
-        ) : (
-          <div className="flex h-40 w-full max-w-xl items-center justify-center rounded-sm border border-dashed border-gold-500/20 text-xs text-gold-300/40">
-            {REVIEW_SCREEN.loadingPassport}
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   )

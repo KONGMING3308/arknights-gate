@@ -7,10 +7,23 @@
   color-scheme: dark;
 }
 
+/* 视口高度用 dvh：手机浏览器地址栏收起/展开时不会跳动；vh 作为旧浏览器回退 */
 html,
 body,
 #root {
-  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 横屏刘海机型：左右安全区留白（竖屏为 0，不影响布局） */
+#root {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 body {
@@ -19,6 +32,14 @@ body {
   color: #e8e4d8;
   font-family: 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  touch-action: manipulation;
+}
+
+/* 触屏点击不出现灰色高亮块 */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* 纸张质感：证件卡片使用 */

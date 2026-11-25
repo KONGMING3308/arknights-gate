@@ -37,11 +37,11 @@ export default function TitleScreen() {
   }
 
   return (
-    <main className="flex min-h-full items-center justify-center bg-ink-900 px-6 py-12">
+    <main className="flex min-h-dvh items-center justify-center bg-ink-900 px-4 py-8 sm:px-6 sm:py-12">
       <div className="w-full max-w-2xl">
         <p className="mb-3 font-mono text-[11px] tracking-[0.5em] text-gold-500/70">{APP_SUBTITLE}</p>
-        <div className="mb-6 flex items-baseline gap-3">
-          <h1 className="text-5xl font-bold tracking-[0.12em] text-gold-300">{APP_TITLE}</h1>
+        <div className="mb-5 flex flex-wrap items-baseline gap-x-3 gap-y-2 sm:mb-6">
+          <h1 className="text-4xl font-bold tracking-[0.12em] text-gold-300 sm:text-5xl">{APP_TITLE}</h1>
           <span className="rounded-sm border border-gold-500/50 px-2 py-0.5 font-mono text-xs tracking-widest text-gold-400">
             {APP_VERSION}
           </span>
@@ -49,11 +49,11 @@ export default function TitleScreen() {
 
         <BriefingNotice />
 
-        <div className="mt-5 mb-6 flex items-center justify-between rounded-sm border border-danger/30 bg-danger/5 px-4 py-3">
+        <div className="mt-5 mb-6 flex items-center justify-between rounded-sm border border-danger/30 bg-danger/5 px-3 py-2.5 sm:px-4 sm:py-3">
           <p className="max-w-lg text-sm leading-relaxed text-danger/95">{TITLE_SCREEN.warning}</p>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
           <Button variant="primary" onClick={handleStart} className="px-8 py-3 text-base">
             {TITLE_SCREEN.start}
           </Button>

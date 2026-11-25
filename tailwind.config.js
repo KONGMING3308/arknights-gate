@@ -3,6 +3,10 @@ export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
+      // 高度不足（手机横屏等矮视口）时保持单列分段布局
+      screens: {
+        tall: { raw: '(min-height: 520px)' },
+      },
       colors: {
         ink: {
           900: '#0b0e13',

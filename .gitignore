@@ -38,3 +38,6 @@ cloudflared.exe
 # 已废弃素材：射击系统移除后，武器图与袭击剪影不再被引用
 public/assets/weapons/
 public/assets/portraits/_test*
+
+# 本地多尺寸验证截图（不入库）
+shots/
