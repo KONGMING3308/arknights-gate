@@ -23,6 +23,11 @@ const FILES = [
   'roster.d3.pool.ts','roster.d3.pool.passports.ts','roster.d3.pool.dossiers.ts',
   'roster.d4.pool.ts','roster.d4.pool.passports.ts','roster.d4.pool.dossiers.ts',
   'roster.d5.pool.ts','roster.d5.pool.passports.ts','roster.d5.pool.dossiers.ts',
+  'roster.d1.pool2.ts','roster.d1.pool2.passports.ts','roster.d1.pool2.dossiers.ts',
+  'roster.d2.pool2.ts','roster.d2.pool2.passports.ts','roster.d2.pool2.dossiers.ts',
+  'roster.d3.pool2.ts','roster.d3.pool2.passports.ts','roster.d3.pool2.dossiers.ts',
+  'roster.d4.pool2.ts','roster.d4.pool2.passports.ts','roster.d4.pool2.dossiers.ts',
+  'roster.d5.pool2.ts','roster.d5.pool2.passports.ts','roster.d5.pool2.dossiers.ts',
 ]
 
 function pick(text, re) {
@@ -55,6 +60,27 @@ function splitApplicants(src) {
 }
 
 /** 从 registry.ts 解析在册干员名录 */
+/** 从 overrides.ts 解析「过期注入 / 双重错误」名单 */
+function loadOverrides() {
+  const src = readFileSync('src/mocks/overrides.ts', 'utf8')
+  const expired = [...src.matchAll(/'([\w-]+)': \{ issueDate: '([\d-]+)', expiryDate: '([\d-]+)' \}/g)].map((m) => ({
+    id: m[1],
+    issue: m[2],
+    expiry: m[3],
+  }))
+  const setStart = src.indexOf('new Set([')
+  const setBlock = setStart >= 0 ? src.slice(setStart, src.indexOf('])', setStart)) : ''
+  const doubleIds = [...setBlock.matchAll(/'([\w-]+)'/g)].map((m) => m[1])
+  return { expired, doubleIds }
+}
+
+/** 从 game.ts 读取游戏内当前日期 */
+function loadCurrentDate() {
+  const src = readFileSync('src/constants/game.ts', 'utf8')
+  const m = src.match(/CURRENT_DATE = '([\d-]+)'/)
+  return m ? m[1] : null
+}
+
 function loadRegistry() {
   const src = readFileSync('src/constants/registry.ts', 'utf8')
   const block = src.slice(src.indexOf('REGISTERED_OPERATORS'))
@@ -84,6 +110,8 @@ for (const f of FILES) {
 }
 
 const registry = loadRegistry()
+const { expired, doubleIds } = loadOverrides()
+const currentDate = loadCurrentDate()
 const problems = []
 const notes = []
 console.log('| 天 | 代号 | 身份 | 编号 | 印章 | 照片 | 职业 | 担保 | 可检出破绽 |')
@@ -153,7 +181,31 @@ for (const a of applicants) {
   }
 }
 
+
+// ---- 注入校验：许可过期 / 双重错误 ----
+const byId = new Map(applicants.map((a) => [a.id, a]))
+if (!currentDate) problems.push('无法读取 CURRENT_DATE')
+for (const e of expired) {
+  const a = byId.get(e.id)
+  if (!a) problems.push(`过期注入：${e.id} 不在名单中`)
+  else if (a.kind !== 'impostor') problems.push(`过期注入：${a.codeName} 不是入侵者`)
+  if (!(e.issue < e.expiry && e.expiry < currentDate)) problems.push(`过期注入：${e.id} 日期不成立（${e.issue} / ${e.expiry}）`)
+}
+for (const id of doubleIds) {
+  const a = byId.get(id)
+  if (!a) problems.push(`双重错误：${id} 不在名单中`)
+  else if (a.kind !== 'impostor') problems.push(`双重错误：${a.codeName} 不是入侵者`)
+}
+const expiredIds = new Set(expired.map((e) => e.id))
+for (const a of applicants) {
+  if (expiredIds.has(a.id)) continue
+  const p = passports[a.id]
+  const exp = p ? pick(p, /expiryDate: '([^']+)'/) : null
+  if (exp && currentDate && exp < currentDate) problems.push(`${a.codeName} 未注入却已过期`)
+}
+
 console.log('\n统计：申请人', applicants.length, '| 通行证', Object.keys(passports).length, '| 档案', Object.keys(dossiers).length)
 console.log('入侵者', applicants.filter((a) => a.kind === 'impostor').length)
+console.log('当前日期', currentDate, '| 许可过期注入', expired.length, '（运行时覆盖，表格未含）| 双重错误', doubleIds.length, '（运行时叠加照片破绽）')
 console.log(notes.length ? '\n新机制样本：\n- ' + notes.join('\n- ') : '')
 console.log(problems.length ? '\n问题：\n- ' + problems.join('\n- ') : '\n全部通过：入侵者均有可检出破绽，正常干员均无破绽。')

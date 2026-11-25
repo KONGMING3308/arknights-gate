@@ -5,7 +5,7 @@
 
 export const APP_TITLE = '这不是我的干员'
 export const APP_SUBTITLE = 'RHODES ISLAND · BORDER INSPECTION'
-export const APP_VERSION = 'v1.2'
+export const APP_VERSION = 'v1.3'
 export const ISSUER_LINE = 'RHODES ISLAND'
 
 export const ACTION_LABEL = {
@@ -150,6 +150,7 @@ export const PASSPORT_COPY = {
   photoMismatch: '与本人不符',
   photoPending: '待人工核验',
   noStamp: '无入境章',
+  todayPrefix: '今日',
   sealHint: '对照标准章核对',
   smudged: '污损',
   entry: '入境',
@@ -190,6 +191,8 @@ export const ACTION_BAR_DELTA = {
 export const DOSSIER_COPY = {
   requiredSeal: '入境章要求',
   ruleNote: '档案编号与通行证编号应完全一致 · 印章机构必须为',
+  sealSample: '标准入境章样张',
+  sealSampleHint: '档案附有章样：机构名「罗德岛人事部」、边框与中心纹样都应与此一致。',
   hintPrefix: '新手提示：',
   hintReady: '调取档案后可核对',
   hintCount: '已发现',

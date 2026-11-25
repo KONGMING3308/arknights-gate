@@ -5,6 +5,7 @@
  */
 import type { Applicant, Discrepancy, Dossier, Passport, SealId } from '@/types'
 import { isRegisteredRecommender } from '@/constants/registry'
+import { CURRENT_DATE } from '@/constants/game'
 
 /** 根据 stampType / sealText 推断印章图案（老数据兼容） */
 export function resolveSealId(passport: Passport): SealId {
@@ -79,6 +80,16 @@ export function buildDiscrepancies(
       expected: '签发日期早于到期日期',
       actual: `签发 ${passport.issueDate} / 到期 ${passport.expiryDate}`,
       hint: '这张通行证的签发日期比到期日期还晚，日期本身就对不上。',
+    })
+  }
+
+  // 许可时效：到期日期早于今日，属于逾期入境
+  if (passport.expiryDate < CURRENT_DATE) {
+    list.push({
+      field: '有效期',
+      expected: `有效至 ${CURRENT_DATE} 之后`,
+      actual: `已于 ${passport.expiryDate} 到期`,
+      hint: '通行证的有效期已经过了，持证人今天入境属于逾期。',
     })
   }
 

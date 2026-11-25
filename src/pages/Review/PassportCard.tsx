@@ -6,6 +6,7 @@
  */
 import Stamp from '@/components/Stamp'
 import { ISSUER_LINE, PASSPORT_COPY, REVIEW_SCREEN } from '@/constants/copy'
+import { CURRENT_DATE } from '@/constants/game'
 import type { Applicant, Passport, VerdictAction } from '@/types'
 import { asset } from '@/utils/asset'
 import { resolveSealId } from '@/utils/compare'
@@ -87,6 +88,9 @@ export default function PassportCard({
           <p>{REVIEW_SCREEN.fieldLabel.seal}</p>
           <p className="mt-0.5 text-[10px] leading-tight text-ink-900/70">
             {sealId === 'none' ? PASSPORT_COPY.noStamp : PASSPORT_COPY.sealHint}
+          </p>
+          <p className="mt-1 font-mono text-[9px] leading-tight tracking-wide text-ink-900/45">
+            {PASSPORT_COPY.todayPrefix} {CURRENT_DATE}
           </p>
         </div>
         {sealId === 'none' ? (

@@ -6,6 +6,7 @@
  */
 import type { Applicant, Dossier, Passport } from '@/types'
 import { drawRoster, shuffleWithSeed } from './draw'
+import { overrideApplicants, overridePassports } from './overrides'
 import { DAY1_APPLICANTS, DAY1_DOSSIERS, DAY1_PASSPORTS } from './roster'
 import { DAY2_APPLICANTS, DAY2_DOSSIERS, DAY2_PASSPORTS } from './roster.d2'
 import { DAY2_EXTRA_APPLICANTS, DAY2_EXTRA_DOSSIERS, DAY2_EXTRA_PASSPORTS } from './roster.d2.extra'
@@ -60,11 +61,11 @@ export const DAILY_IMPOSTORS: Record<number, number> = { 1: 1, 2: 1, 3: 2, 4: 2,
 
 /** 按天合并的候选池 */
 const POOL_BY_DAY: Record<number, Applicant[]> = {
-  1: [...DAY1_APPLICANTS, ...DAY1_POOL_APPLICANTS, ...DAY1_POOL2_APPLICANTS],
-  2: [...DAY2_APPLICANTS, ...DAY2_EXTRA_APPLICANTS, ...DAY2_POOL_APPLICANTS, ...DAY2_POOL2_APPLICANTS],
-  3: [...DAY3_APPLICANTS, ...DAY3_EXTRA_APPLICANTS, ...DAY3_POOL_APPLICANTS, ...DAY3_POOL2_APPLICANTS],
-  4: [...DAY4_APPLICANTS, ...DAY4_EXTRA_APPLICANTS, ...DAY4_POOL_APPLICANTS, ...DAY4_POOL2_APPLICANTS],
-  5: [...DAY5_APPLICANTS, ...DAY5_EXTRA_APPLICANTS, ...DAY5_POOL_APPLICANTS, ...DAY5_POOL2_APPLICANTS],
+  1: overrideApplicants([...DAY1_APPLICANTS, ...DAY1_POOL_APPLICANTS, ...DAY1_POOL2_APPLICANTS]),
+  2: overrideApplicants([...DAY2_APPLICANTS, ...DAY2_EXTRA_APPLICANTS, ...DAY2_POOL_APPLICANTS, ...DAY2_POOL2_APPLICANTS]),
+  3: overrideApplicants([...DAY3_APPLICANTS, ...DAY3_EXTRA_APPLICANTS, ...DAY3_POOL_APPLICANTS, ...DAY3_POOL2_APPLICANTS]),
+  4: overrideApplicants([...DAY4_APPLICANTS, ...DAY4_EXTRA_APPLICANTS, ...DAY4_POOL_APPLICANTS, ...DAY4_POOL2_APPLICANTS]),
+  5: overrideApplicants([...DAY5_APPLICANTS, ...DAY5_EXTRA_APPLICANTS, ...DAY5_POOL_APPLICANTS, ...DAY5_POOL2_APPLICANTS]),
 }
 
 export const ALL_APPLICANTS: Applicant[] = [
@@ -75,7 +76,7 @@ export const ALL_APPLICANTS: Applicant[] = [
   ...POOL_BY_DAY[5]!,
 ]
 
-export const ALL_PASSPORTS: Record<string, Passport> = {
+export const ALL_PASSPORTS: Record<string, Passport> = overridePassports({
   ...DAY1_PASSPORTS,
   ...DAY2_PASSPORTS,
   ...DAY2_EXTRA_PASSPORTS,
@@ -96,7 +97,7 @@ export const ALL_PASSPORTS: Record<string, Passport> = {
   ...DAY4_POOL2_PASSPORTS,
   ...DAY5_POOL2_PASSPORTS,
   [PRESETH_ID]: PRESETH_PASSPORT,
-}
+})
 
 export const ALL_DOSSIERS: Record<string, Dossier> = {
   ...DAY1_DOSSIERS,

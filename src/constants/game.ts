@@ -7,6 +7,12 @@ import type { Day } from '@/types'
 /** 初始安全度与信任度 */
 export const INITIAL_STAT = 100
 
+/**
+ * 游戏内当前日期（泰拉历）：入境审查发生日。
+ * 通行证的「有效至」早于这一天即视为许可过期（`compare.ts` 的「有效期」破绽）。
+ */
+export const CURRENT_DATE = '1096-04-01'
+
 /** 处置对数值的影响：operator 表示正常干员，impostor 表示入侵者 */
 export const VERDICT_EFFECT = {
   operator: { approve: { trust: 2, safety: 0 }, reject: { trust: -8, safety: 0 } },

@@ -58,6 +58,25 @@ export default function DossierCard({ dossier }: DossierCardProps) {
         {DOSSIER_COPY.ruleNote} {dossier.requiredSeal}
       </p>
 
+      {/* 标准入境章样张：调档后附在档案里，供玩家与通行证上的章逐项比对 */}
+      <div className="mt-2 flex items-center gap-3 rounded-sm border border-gold-500/15 bg-ink-900/40 p-2">
+        <div className="shrink-0 rounded-sm bg-[#ece2c8] p-1 shadow-seal">
+          <img
+            src={asset('assets/seals/seal_standard.png')}
+            alt={DOSSIER_COPY.sealSample}
+            className="h-12 w-12 -rotate-6 object-contain mix-blend-multiply sm:h-14 sm:w-14"
+          />
+        </div>
+        <div className="min-w-0">
+          <p className="text-[10px] font-semibold tracking-[0.2em] text-gold-300/90">
+            {DOSSIER_COPY.sealSample}
+          </p>
+          <p className="mt-1 text-[10px] leading-relaxed text-gold-300/50">
+            {DOSSIER_COPY.sealSampleHint}
+          </p>
+        </div>
+      </div>
+
       {dossier.note && (
         <p className="mt-2 rounded-sm border-l-2 border-gold-500/60 bg-gold-500/10 px-2 py-1.5 text-[11px] leading-relaxed text-gold-300/90">
           {DOSSIER_COPY.notePrefix}
